@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\obj",
+    "\\obj\\Debug",
+    "\\obj\\Debug\\netcoreapp2.2",
+    "\\wwwroot",
+    "\\wwwroot\\lib",
+    "\\wwwroot\\lib\\bootstrap",
+    "\\wwwroot\\lib\\bootstrap\\dist",
+    "\\wwwroot\\lib\\bootstrap\\dist\\js"
+  ],
+  "PreviewInSolutionExplorer": true
+}

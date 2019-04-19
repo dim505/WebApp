@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\razor_pages.csproj": {}
+    "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\WebApp\\razor_pages.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\razor_pages.csproj": {
+    "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\WebApp\\razor_pages.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\razor_pages.csproj",
+        "projectUniqueName": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\WebApp\\razor_pages.csproj",
         "projectName": "razor_pages",
-        "projectPath": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\razor_pages.csproj",
+        "projectPath": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\WebApp\\razor_pages.csproj",
         "packagesPath": "C:\\Users\\bob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\obj\\",
+        "outputPath": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bob\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +51,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.4, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",

@@ -1,0 +1,43 @@
+﻿@page
+@model MyApp.Namespace.CalculatorModel
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+<h1>Here is my Calcualtor! Written in C#,HTML and CSS</h1>
+
+   <div class = title >C# Calculator</div> 
+      <table border="1"> 
+         <tr> 
+            <td colspan="3"><input type="text" id="result"/></td> 
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="c" onclick="clr()"/> </td> 
+         </tr> 
+         <tr> 
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick=""/> </td> 
+            <td><input type="button" value="2" onclick=""/> </td> 
+            <td><input type="button" value="3" onclick=""/> </td> 
+            <td><input type="button" value="/" onclick=""/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick=""/> </td> 
+            <td><input type="button" value="5" onclick=""/> </td> 
+            <td><input type="button" value="6" onclick=""/> </td> 
+            <td><input type="button" value="-" onclick=""/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick=""/> </td> 
+            <td><input type="button" value="8" onclick=""/> </td> 
+            <td><input type="button" value="9" onclick=""/> </td> 
+            <td><input type="button" value="+" onclick=""/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick=""/> </td> 
+            <td><input type="button" value="0" onclick=""/> </td> 
+
+            <td><input type="button" value="=" onclick=""/> </td> 
+            <td><input type="button" value="*" onclick=""/> </td> 
+         </tr> 
+      </table> 
