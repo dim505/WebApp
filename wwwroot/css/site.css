@@ -62,11 +62,6 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
-
-
-
-
-
 .title{ 
  margin-bottom: 10px; 
  text-align:center; 
@@ -75,19 +70,20 @@ body {
  border: solid black 3px; 
  } 
 
- input[type="button"] 
+input[type=submit] 
  { 
  background-color:blue; 
  color: white; 
  border: solid black 2px; 
- width:100% 
+ width:100%; 
  } 
 
- input[type="text"] 
+
+input[type=text]
  { 
  background-color:white; 
  border: solid black 2px; 
- width:100% 
+ width:100%; 
  } 
 
 

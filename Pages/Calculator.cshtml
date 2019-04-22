@@ -6,38 +6,45 @@
 
 <h1>Here is my Calcualtor! Written in C#,HTML and CSS</h1>
 
-   <div class = title >C# Calculator</div> 
-      <table border="1"> 
-         <tr> 
-            <td colspan="3"><input type="text" id="result"/></td> 
-            <!-- clr() function will call clr to clear all value -->
-            <td><input type="button" value="c" onclick="clr()"/> </td> 
-         </tr> 
-         <tr> 
-            <!-- create button and assign value to each button -->
-            <!-- dis("1") will call function dis to display value -->
-            <td><input type="button" value="1" onclick=""/> </td> 
-            <td><input type="button" value="2" onclick=""/> </td> 
-            <td><input type="button" value="3" onclick=""/> </td> 
-            <td><input type="button" value="/" onclick=""/> </td> 
-         </tr> 
-         <tr> 
-            <td><input type="button" value="4" onclick=""/> </td> 
-            <td><input type="button" value="5" onclick=""/> </td> 
-            <td><input type="button" value="6" onclick=""/> </td> 
-            <td><input type="button" value="-" onclick=""/> </td> 
-         </tr> 
-         <tr> 
-            <td><input type="button" value="7" onclick=""/> </td> 
-            <td><input type="button" value="8" onclick=""/> </td> 
-            <td><input type="button" value="9" onclick=""/> </td> 
-            <td><input type="button" value="+" onclick=""/> </td> 
-         </tr> 
-         <tr> 
-            <td><input type="button" value="." onclick=""/> </td> 
-            <td><input type="button" value="0" onclick=""/> </td> 
 
-            <td><input type="button" value="=" onclick=""/> </td> 
-            <td><input type="button" value="*" onclick=""/> </td> 
-         </tr> 
-      </table> 
+
+<form method="post">
+
+
+    <div class="title">C# Calculator</div>
+
+    <table border="1">
+        <tr>
+            <td colspan="3"><input type="text" id="result" />@Html.Raw(ViewData["result"])</td>
+
+            <td><input type="submit" value="c" asp-page-handler="Calculate" asp-route-BtnVal="C" /> </td>
+        </tr>
+        <tr>
+
+            <td><input type="button" value="1" asp-page-handler="Calculate" asp-route-BtnVal="1" /> </td>
+            <td><input type="submit" value="2" asp-page-handler="Calculate" asp-route-BtnVal="2" /> </td>
+            <td><input type="submit" value="3" asp-page-handler="Calculate" asp-route-BtnVal="3" /> </td>
+            <td><input type="submit" value="/" asp-page-handler="Calculate" asp-route-BtnVal="/" /> </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="4" asp-page-handler="Calculate" asp-route-BtnVal="4" /> </td>
+            <td><input type="submit" value="5" asp-page-handler="Calculate" asp-route-BtnVal="5" /> </td>
+            <td><input type="submit" value="6" asp-page-handler="Calculate" asp-route-BtnVal="6" /> </td>
+            <td><input type="submit" value="-" asp-page-handler="Calculate" asp-route-BtnVal="-" /> </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="7" asp-page-handler="Calculate" asp-route-BtnVal="7" /> </td>
+            <td><input type="submit" value="8" asp-page-handler="Calculate" asp-route-BtnVal="8" /> </td>
+            <td><input type="submit" value="9" asp-page-handler="Calculate" asp-route-BtnVal="9" /> </td>
+            <td><input type="submit" value="+" asp-page-handler="Calculate" asp-route-BtnVal="+" /> </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="." asp-page-handler="Calculate" asp-route-BtnVal="." /> </td>
+            <td><input type="submit" value="0" asp-page-handler="Calculate" asp-route-BtnVal="0" /> </td>
+
+            <td><input type="submit" value="=" asp-page-handler="Calculate" asp-route-BtnVal="=" /> </td>
+            <td><input type="submit" value="*" asp-page-handler="Calculate" asp-route-BtnVal="*" /> </td>
+        </tr>
+    </table>
+
+</form>
