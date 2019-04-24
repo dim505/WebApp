@@ -29,13 +29,48 @@ namespace MyApp.Namespace
         {	
         }
 
-        public void OnPostCalculate(String BtnVal)
+        public async Task<IActionResult> OnPostCalculateAsync(String BtnVal)
         {
 
+            HttpContext.Cache["CachVarCurrNum"] = 0;
+            HttpContext.Cache["CachVarTotNum"] = 0;
 
-            ResultInfo = BtnVal;
 
-            ViewData["result"] = $"{ResultInfo}";
+            if (string.Equals(BtnVal,'C')) {
+
+                ResultInfo = "";
+                BtnVal = "";
+                HttpContext.Cache["CachVarTotNum"] = "";
+                HttpContext.Cache["CachVarCurrNum"] = "";
+
+
+            } if (string.Equals(BtnVal, '/')) {
+
+
+
+            }
+
+            if (string.Equals(BtnVal, '-')) { }
+
+            if (string.Equals(BtnVal, '*')) { }
+
+            if (string.Equals(BtnVal, '+')) { }
+
+       
+            else {
+
+
+                HttpContext.Cache["CachVarCurrNum"] += BtnVal;
+                ResultInfo = HttpContext.Cache["CachVarCurrNum"];
+
+            }
+                
+
+
+
+
+            //You can use RedirectToPage with no arguments to redirect to the default GET handler of the current Razor Page.
+            return RedirectToPage();
 
 
 

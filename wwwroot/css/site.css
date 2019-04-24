@@ -70,7 +70,7 @@ body {
  border: solid black 3px; 
  } 
 
-input[type=submit] 
+.calc td input[type=submit] 
  { 
  background-color:blue; 
  color: white; 
@@ -79,7 +79,7 @@ input[type=submit]
  } 
 
 
-input[type=text]
+.calc td input[type=text]
  { 
  background-color:white; 
  border: solid black 2px; 

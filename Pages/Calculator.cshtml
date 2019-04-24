@@ -13,15 +13,15 @@
 
     <div class="title">C# Calculator</div>
 
-    <table border="1">
+    <table border="1" class="calc">
         <tr>
-            <td colspan="3"><input type="text" id="result" />@Html.Raw(ViewData["result"])</td>
+            <td colspan="3"><input asp-for="ResultInfo" /></td>
 
             <td><input type="submit" value="c" asp-page-handler="Calculate" asp-route-BtnVal="C" /> </td>
         </tr>
         <tr>
 
-            <td><input type="button" value="1" asp-page-handler="Calculate" asp-route-BtnVal="1" /> </td>
+            <td><input type="submit" value="1" asp-page-handler="Calculate" asp-route-BtnVal="1" /> </td>
             <td><input type="submit" value="2" asp-page-handler="Calculate" asp-route-BtnVal="2" /> </td>
             <td><input type="submit" value="3" asp-page-handler="Calculate" asp-route-BtnVal="3" /> </td>
             <td><input type="submit" value="/" asp-page-handler="Calculate" asp-route-BtnVal="/" /> </td>
