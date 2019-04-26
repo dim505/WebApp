@@ -12080,7 +12080,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\WebApp\\razor_pages.csproj",
-      "projectName": "razor_pages",
+      "projectName": "MyApp.Namespace",
       "projectPath": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\WebApp\\razor_pages.csproj",
       "packagesPath": "C:\\Users\\bob\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\bob\\Documents\\Visual Studio 2015\\Projects\\razor_pages\\WebApp\\obj\\",

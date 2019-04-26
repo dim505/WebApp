@@ -4,67 +4,73 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MyApp.Namespace;
 
 namespace MyApp.Namespace
 {
     public class CalculatorModel : PageModel
     {
-		
 
-		[TempData]
+
+
+
+
+        [TempData]
         public string ResultInfo { get; set; }
-       
-     
+
+
         [BindProperty]
         public double UsrInput { get; set; }
 
-       
+
         [BindProperty]
         public double OperandInput { get; set; }
-		
-		
-		
-		
+
+       
+     
+
+        
+
         public void OnGet()
         {	
         }
 
         public async Task<IActionResult> OnPostCalculateAsync(String BtnVal)
         {
+            
+            GloVar.VarTotNum = "";
+            GloVar.VarCurrNum = "";
 
-            HttpContext.Cache["CachVarCurrNum"] = 0;
-            HttpContext.Cache["CachVarTotNum"] = 0;
 
-
-            if (string.Equals(BtnVal,'C')) {
-
+            if (string.Equals(BtnVal,"C")) {
+              
                 ResultInfo = "";
                 BtnVal = "";
-                HttpContext.Cache["CachVarTotNum"] = "";
-                HttpContext.Cache["CachVarCurrNum"] = "";
+                GloVar.VarTotNum = "";
+                GloVar.VarCurrNum = "";
 
 
-            } if (string.Equals(BtnVal, '/')) {
-
-
+            } else if (string.Equals(BtnVal, '/')) {
+              
+                
 
             }
 
-            if (string.Equals(BtnVal, '-')) { }
+            else if (string.Equals(BtnVal, '-')) { }
 
-            if (string.Equals(BtnVal, '*')) { }
+            else if (string.Equals(BtnVal, '*')) { }
 
-            if (string.Equals(BtnVal, '+')) { }
+            else if (string.Equals(BtnVal, '+')) { }
 
        
             else {
 
 
-                HttpContext.Cache["CachVarCurrNum"] += BtnVal;
-                ResultInfo = HttpContext.Cache["CachVarCurrNum"];
+                GloVar.VarCurrNum += BtnVal;
+                ResultInfo = GloVar.VarCurrNum;
 
             }
-                
+
 
 
 

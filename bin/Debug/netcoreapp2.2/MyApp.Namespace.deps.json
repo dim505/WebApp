@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "razor_pages/1.0.0": {
+      "MyApp.Namespace/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -30,10 +30,10 @@
           "Microsoft.NETCore.App": "2.2.0"
         },
         "runtime": {
-          "razor_pages.dll": {}
+          "MyApp.Namespace.dll": {}
         },
         "compile": {
-          "razor_pages.dll": {}
+          "MyApp.Namespace.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/2.2.4": {
@@ -3258,7 +3258,7 @@
     }
   },
   "libraries": {
-    "razor_pages/1.0.0": {
+    "MyApp.Namespace/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
