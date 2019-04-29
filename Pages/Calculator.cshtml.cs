@@ -37,37 +37,102 @@ namespace MyApp.Namespace
 
         public async Task<IActionResult> OnPostCalculateAsync(String BtnVal)
         {
-            
-            GloVar.VarTotNum = "";
-            GloVar.VarCurrNum = "";
 
 
-            if (string.Equals(BtnVal,"C")) {
-              
+
+
+            if (string.Equals(BtnVal, "C"))
+            {
+
                 ResultInfo = "";
                 BtnVal = "";
                 GloVar.VarTotNum = "";
                 GloVar.VarCurrNum = "";
+                GloVar.VarCurrNum2 = "";
+                GloVar.VarCurrSign = "";
+                GloVar.VarDisplayStr = "";
 
-
-            } else if (string.Equals(BtnVal, '/')) {
-              
-                
+            }
+            else if (string.Equals(BtnVal, "/"))
+            {
+                GloVar.VarCurrSign = "/";
+                GloVar.VarDisplayStr += GloVar.VarCurrSign;
+                ResultInfo = GloVar.VarDisplayStr;
 
             }
 
-            else if (string.Equals(BtnVal, '-')) { }
+            else if (string.Equals(BtnVal, "-")) {
 
-            else if (string.Equals(BtnVal, '*')) { }
+                GloVar.VarCurrSign = "-";
+                GloVar.VarDisplayStr += GloVar.VarCurrSign;
+                ResultInfo = GloVar.VarDisplayStr;
 
-            else if (string.Equals(BtnVal, '+')) { }
+            }
 
-       
-            else {
+
+            else if (string.Equals(BtnVal, "*")) {
+                GloVar.VarCurrSign = "*";
+                GloVar.VarDisplayStr += GloVar.VarCurrSign;
+                ResultInfo = GloVar.VarDisplayStr;
+            }
+
+
+            else if (string.Equals(BtnVal, "=")) {
+
+                int VarCurrNum = Convert.ToInt32(GloVar.VarCurrNum);
+                int VarCurrNum2 = Convert.ToInt32(GloVar.VarCurrNum2);
+                int results = 0;
+                if (string.Equals(GloVar.VarCurrSign, "+")) {
+                   results = VarCurrNum + VarCurrNum2; }
+                
+
+                else if (string.Equals(GloVar.VarCurrSign, "-")) {
+                    results = VarCurrNum - VarCurrNum2;
+
+                }
+
+                else if (string.Equals(GloVar.VarCurrSign, "*")) {
+                    results = VarCurrNum * VarCurrNum2;
+
+                }
+
+                else if (string.Equals(GloVar.VarCurrSign, "/")) {
+                    results = VarCurrNum / VarCurrNum2;
+
+                }
+
+
+
+                ResultInfo = results.ToString();
+
+
+
+
+            }
+
+            else if (string.Equals(BtnVal, "+"))
+            {
+                GloVar.VarCurrSign = "+";
+                GloVar.VarDisplayStr +=  GloVar.VarCurrSign;
+                ResultInfo = GloVar.VarDisplayStr;
+
+
+            }
+
+            else if (!string.IsNullOrWhiteSpace(GloVar.VarCurrSign)) {
+
+                GloVar.VarCurrNum2 += BtnVal;
+                GloVar.VarDisplayStr += BtnVal;
+                ResultInfo = GloVar.VarDisplayStr;
+
+            }
+            else
+            {
 
 
                 GloVar.VarCurrNum += BtnVal;
-                ResultInfo = GloVar.VarCurrNum;
+                GloVar.VarDisplayStr = GloVar.VarCurrNum;
+                ResultInfo = GloVar.VarDisplayStr;
 
             }
 
