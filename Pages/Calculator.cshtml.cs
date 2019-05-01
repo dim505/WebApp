@@ -48,7 +48,7 @@ namespace MyApp.Namespace
                 BtnVal = "";
                 GloVar.VarTotNum = "";
                 GloVar.VarCurrNum = "";
-                GloVar.VarCurrNum2 = "";
+                GloVar.VarCurrNum2 = "0";
                 GloVar.VarCurrSign = "";
                 GloVar.VarDisplayStr = "";
 
@@ -79,9 +79,21 @@ namespace MyApp.Namespace
 
             else if (string.Equals(BtnVal, "=")) {
 
-                int VarCurrNum = Convert.ToInt32(GloVar.VarCurrNum);
-                int VarCurrNum2 = Convert.ToInt32(GloVar.VarCurrNum2);
-                int results = 0;
+                if (string.IsNullOrWhiteSpace(GloVar.VarCurrNum) | string.IsNullOrWhiteSpace(GloVar.VarCurrNum2))
+                {
+
+
+
+                }
+                else {
+
+
+
+
+                
+                float VarCurrNum = Convert.ToInt32(GloVar.VarCurrNum);
+                float VarCurrNum2 = Convert.ToInt32(GloVar.VarCurrNum2);
+                float results = 0;
                 if (string.Equals(GloVar.VarCurrSign, "+")) {
                    results = VarCurrNum + VarCurrNum2; }
                 
@@ -102,10 +114,14 @@ namespace MyApp.Namespace
                 }
 
 
+                GloVar.VarTotNum = results.ToString();
+                GloVar.VarCurrNum = results.ToString();
+                GloVar.VarCurrNum2 = "0";
+                GloVar.VarCurrSign = "";
+                GloVar.VarDisplayStr = GloVar.VarTotNum;
+                ResultInfo = GloVar.VarDisplayStr;
 
-                ResultInfo = results.ToString();
-
-
+                }
 
 
             }

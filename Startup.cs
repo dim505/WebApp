@@ -51,7 +51,7 @@ namespace razor_pages
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            //app.UseCookiePolicy() commented out cookie pop up policy;
 
             app.UseMvc();
         }
