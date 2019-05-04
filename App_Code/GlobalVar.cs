@@ -18,10 +18,10 @@ namespace MyApp.Namespace
      public static string _VarCurrNum2;
      public static string _VarCurrSign; 
      public static string _VarTotNum;
-     public static string _VarDisplayStr;    
+     public static string _VarDisplayStr;
+     public static int _FirSignFlag = 0;
 
-
-    public static string VarTotNum
+        public static string VarTotNum
     {
         get
         {
@@ -87,6 +87,26 @@ namespace MyApp.Namespace
             set {
 
                 _VarDisplayStr = value; 
+
+            }
+
+        }
+
+
+
+        public static int FirSignFlag
+        {
+
+            get
+            {
+
+                return _FirSignFlag;
+            }
+
+            set
+            {
+
+                _FirSignFlag = value;
 
             }
 
