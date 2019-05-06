@@ -14,6 +14,7 @@ namespace MyApp.Namespace
 
     {
 
+    //declares public fields
      public static string _VarCurrNum;
      public static string _VarCurrNum2;
      public static string _VarCurrSign; 
@@ -21,6 +22,7 @@ namespace MyApp.Namespace
      public static string _VarDisplayStr;
      public static int _FirSignFlag = 0;
 
+       //this is used to keep track of the total 
         public static string VarTotNum
     {
         get
@@ -35,7 +37,7 @@ namespace MyApp.Namespace
 
        
 
-    
+    //this is used to keep track of the number pressed before the first arithmetic sign 
         public static string VarCurrNum
         {
             get
@@ -48,7 +50,7 @@ namespace MyApp.Namespace
             }
         }
 
-
+        //this is used to keep track of the numbers pressed after the first arithmetic sign
         public static string VarCurrNum2
         {
             get
@@ -61,7 +63,7 @@ namespace MyApp.Namespace
             }
         }
 
-
+        //keeps track of the arithmetic sign
         public static string VarCurrSign
         {
             get
@@ -76,7 +78,7 @@ namespace MyApp.Namespace
             }
 
         }
-
+        //keeps track of the display string. Number + arithmetic sign
         public static string VarDisplayStr {
 
             get {
@@ -93,7 +95,7 @@ namespace MyApp.Namespace
         }
 
 
-
+        //used to determine if a arithmetic sign is being used
         public static int FirSignFlag
         {
 

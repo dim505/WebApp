@@ -22,6 +22,7 @@ namespace MyApp.Namespace
 
         //FUTURE CODE OPTIMIZATION: SEE IF RESULTINFO CAN BE REMOVED AND GLODISPLAYSTR CAN BE DISPLAYED DIRECTLY
         //                          SEE IF YOU CAN GET RID OF FLAG AND CHECK FOR NULL DIRECTLY FOR SIGN
+        //                          clean up any unused variables
      
 
         
