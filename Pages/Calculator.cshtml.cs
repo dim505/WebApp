@@ -43,14 +43,16 @@ namespace MyApp.Namespace
                 ResultInfo = "";
                 BtnVal = "";
                 GloVar.VarTotNum = "";
-                GloVar.VarCurrNum = "";
+                GloVar.VarCurrNum = "0";
                 GloVar.VarCurrNum2 = "0";
                 GloVar.VarCurrSign = "";
-                GloVar.VarDisplayStr = "";
+                GloVar.VarDisplayStr = "0";
                 GloVar.FirSignFlag = 0;
                 
             }
             //checks if pressed button is divide
+
+
             else if (string.Equals(BtnVal, "/"))
             {
                 //sets the sign variable
@@ -58,6 +60,8 @@ namespace MyApp.Namespace
 
                 //checks if any other sign buttons have been pressed
                 if (GloVar.FirSignFlag == 0) {
+
+
                     //appends sign to display string
                     GloVar.VarDisplayStr += GloVar.VarCurrSign;
 
@@ -96,7 +100,7 @@ namespace MyApp.Namespace
                 else
                 {
                     //replaces an other signs that may have been pressed with -
-                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("*", "-").Replace("/", "-").Replace("*", "-");
+                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("*", "-").Replace("/", "-").Replace("+", "-");
                 }
                 //sets the display variable
                 ResultInfo = GloVar.VarDisplayStr;

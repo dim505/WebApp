@@ -71,6 +71,12 @@ body {
  border: solid black 3px; 
  } 
 
+.calc table {
+	
+	width:210px;
+	
+}
+
 .calc td input[type=submit] 
  { 
  background-color:blue; 

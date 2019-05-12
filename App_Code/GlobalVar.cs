@@ -15,11 +15,11 @@ namespace MyApp.Namespace
     {
 
     //declares public fields
-     public static string _VarCurrNum;
+     public static string _VarCurrNum = "0";
      public static string _VarCurrNum2;
      public static string _VarCurrSign; 
      public static string _VarTotNum;
-     public static string _VarDisplayStr;
+     public static string _VarDisplayStr = "0";
      public static int _FirSignFlag = 0;
 
        //this is used to keep track of the total 
