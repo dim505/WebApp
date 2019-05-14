@@ -79,6 +79,7 @@ body {
 
 .calc td input[type=submit] 
  { 
+	
  background-color:blue; 
  color: white; 
  border: solid black 2px; 

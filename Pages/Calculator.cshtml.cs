@@ -72,7 +72,7 @@ namespace MyApp.Namespace
                 } else {
 
                     //replaces an other signs that may have been pressed with /
-                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("-", "/").Replace("+", "/").Replace("*", "/");
+                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("–", "/").Replace("+", "/").Replace("*", "/");
 
 
                 }
@@ -83,9 +83,9 @@ namespace MyApp.Namespace
             }
 
             //checks if pressed button is subtract
-            else if (string.Equals(BtnVal, "-")) {
+            else if (string.Equals(BtnVal, "–")) {
                 //sets the sign variable
-                GloVar.VarCurrSign = "-";
+                GloVar.VarCurrSign = "–";
 
                 //checks if any other sign buttons have been pressed
                 if (GloVar.FirSignFlag == 0)
@@ -100,7 +100,7 @@ namespace MyApp.Namespace
                 else
                 {
                     //replaces an other signs that may have been pressed with -
-                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("*", "-").Replace("/", "-").Replace("+", "-");
+                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("*", "–").Replace("/", "–").Replace("+", "–");
                 }
                 //sets the display variable
                 ResultInfo = GloVar.VarDisplayStr;
@@ -124,7 +124,7 @@ namespace MyApp.Namespace
                 else
                 {
                     //replaces an other signs that may have been pressed with *
-                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("-", "*").Replace("/", "*").Replace("+", "*");
+                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("–", "*").Replace("/", "*").Replace("+", "*");
                 }
 
                 //sets the display variable
@@ -138,7 +138,7 @@ namespace MyApp.Namespace
                 if (string.IsNullOrWhiteSpace(GloVar.VarCurrNum) | string.IsNullOrWhiteSpace(GloVar.VarCurrNum2))
                 {
                     //replaces any possible pressed signs with a blank and returns only any possible numbers pressed
-                    ResultInfo = GloVar.VarDisplayStr.Replace("-", "").Replace("/", "").Replace("+", "").Replace("*", "");
+                    ResultInfo = GloVar.VarDisplayStr.Replace("–", "").Replace("/", "").Replace("+", "").Replace("*", "");
                     //returns page with specified values
                     return RedirectToPage();
                     
@@ -159,7 +159,7 @@ namespace MyApp.Namespace
                    results = VarCurrNum + VarCurrNum2; }
                 
 
-                else if (string.Equals(GloVar.VarCurrSign, "-")) {
+                else if (string.Equals(GloVar.VarCurrSign, "–")) {
                     results = VarCurrNum - VarCurrNum2;
 
                 }
@@ -209,7 +209,7 @@ namespace MyApp.Namespace
                 else
                 {
                     //replaces an other signs that may have been pressed with a + sign
-                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("-", "+").Replace("/", "+").Replace("*", "+");
+                    GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("–", "+").Replace("/", "+").Replace("*", "+");
                 }
                 //sets the display variable for the page
                 ResultInfo = GloVar.VarDisplayStr;
