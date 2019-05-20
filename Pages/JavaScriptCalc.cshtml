@@ -1,0 +1,109 @@
+﻿@page
+@model MyApp.Namespace.JavaScriptCalcModel
+@{
+}
+
+
+<script>
+
+    //$(document).ready(function () {
+    $(function () {
+
+        var sPositions = localStorage.positions || "{}",
+            positions = JSON.parse(sPositions);
+        $.each(positions, function (id, pos) {
+            $("#" + id).css(pos);
+        });
+        $("#draggable").draggable({
+            containment: "#containment",
+            scroll: false,
+            stop: function (event, ui) {
+                positions[this.id] = ui.position;
+                localStorage.positions = JSON.stringify(positions);
+            }
+        });
+
+
+
+    });
+     //   });
+
+
+
+</script>
+
+
+
+<h1>Here is my Javascript Calculator! Written in Javascript,HTML and CSS</h1>
+
+
+<div id="containment">
+    <div id="draggable" class="ui-widget-content">
+        <form>
+
+            <table>
+
+                <tr>
+
+                    <td> <input type="button" name="one" value="7" onclick=""></td>
+                    <td> <input type="button" name="one" value="8" onclick=""></td>
+                    <td> <input type="button" name="one" value="9" onclick=""></td>
+                    <td> <input type="button" name="one" value="x" onclick=""></td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td> <input type="button" name="one" value="4" onclick=""></td>
+                    <td> <input type="button" name="one" value="5" onclick=""></td>
+                    <td> <input type="button" name="one" value="6" onclick=""></td>
+                    <td> <input type="button" name="one" value="-" onclick=""></td>
+
+
+                </tr>
+
+                <tr>
+
+
+
+                    <td> <input type="button" name="one" value="1" onclick=""></td>
+                    <td> <input type="button" name="one" value="2" onclick=""></td>
+                    <td> <input type="button" name="one" value="3" onclick=""></td>
+                    <td> <input type="button" name="one" value="+" onclick=""></td>
+
+
+                </tr>
+
+                <tr>
+
+                    <td> <input type="button" name="one" value="±" onclick=""></td>
+                    <td> <input type="button" name="one" value="0" onclick=""></td>
+                    <td> <input type="button" name="one" value="." onclick=""></td>
+                    <td> <input type="button" name="one" value="=" onclick=""></td>
+
+
+
+                </tr>
+
+
+
+
+
+            </table>
+
+
+
+
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+
+

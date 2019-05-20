@@ -19,12 +19,18 @@
 
 
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    <script>
+        // Fallback to loading jQuery from a local path if the CDN is unavailable
+        (window.jQuery || document.write('<script src="~/js/jquery-3.4.1.min.js"><\/script>'));
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        // Fallback to loading jQuery from a local path if the CDN is unavailable
+        (window.jQuery || document.write('<script src="~/js/jquery-ui-1.12.1/jquery-ui.min.js"><\/script>'));
+    </script>
+   
 
 </head>
 <body>
@@ -36,30 +42,44 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+              
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse dropdown">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-						
-						
-						<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Calculator">Calculator</a>
-                        </li>
-						
-						
-						
+
+
+                     
+
+                        <li class="nav-item">
+                            <div class="Cssdropdown">
+                                <button class="dropbtn" type="button" data-toggle="dropdown">Calculators<span class="caret"></span> </button>
+                                    
+                                    <ul class="dropdown-content">
+                                        <li><a asp-area="" asp-page="/Calculator">C#</a></li>
+                                        <li><a asp-area="" asp-page="/JavaScriptCalc">Javascript</a></li>
+                                    </ul>
+                            </div>
+
+                        
+
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/about">About</a>
                         </li>
-						
+
+
 
                     </ul>
-					
-					
-					
-					
+
+
+
+
+
                 </div>
+
             </div>
         </nav>
     </header>
@@ -81,12 +101,7 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </environment>
     <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"

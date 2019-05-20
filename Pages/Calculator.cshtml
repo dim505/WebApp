@@ -6,33 +6,8 @@
 }
 
 
-<script>
-
-    //$(document).ready(function () {
-    $(function () {
-
-        var sPositions = localStorage.positions || "{}",
-            positions = JSON.parse(sPositions);
-        $.each(positions, function (id, pos) {
-            $("#" + id).css(pos);
-        });
-        $("#draggable").draggable({
-            //containment: "#containment",
-            scroll: false,
-            stop: function (event, ui) {
-                positions[this.id] = ui.position;
-                localStorage.positions = JSON.stringify(positions);
-            }
-        });
 
 
-
-    });
-     //   });
-
-
-
-</script>
 
 
 
@@ -40,8 +15,8 @@
 
 <h1>Here is my Calculator! Written in C#,HTML and CSS</h1>
 
-<div id="containment">
-    <form method="post" id="draggable">
+
+    <form method="post">
 
 
         <div class="title">C# Calculator</div>
@@ -82,4 +57,3 @@
         </div>
     </form>
 
-</div>
