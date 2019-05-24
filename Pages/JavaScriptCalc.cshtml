@@ -40,10 +40,52 @@
     function btn8() { document.getElementById("display").value += "8" };
     function btn9() { document.getElementById("display").value += "9" };
     function btn0() { document.getElementById("display").value += "0" };
-    function btnMulti() { document.getElementById("display").value += "*" };
+    function btnMulti() {
+        var display = document.getElementById("display").value
+        if (display[display.length -1] == "+" || display[display.length -1] == "-" || display[display.length -1] == "/" || display[display.length -1] == "*") {
+
+          display = display.slice(0, -1) + "*"
+            document.getElementById("display").value += "*"
+        }
+        document.getElementById("display").value += "*"
+    };
     function btnSub() { document.getElementById("display").value += "-" };
     function btnAdd() { document.getElementById("display").value += "+" };
-    function btnEq() { document.getElementById("display").value += "=" };
+    function btnEq() {
+        var results = eval(document.getElementById("display").value )
+        document.getElementById("display").value = results
+
+
+    };
+    function btnDec() { document.getElementById("display").value += "." };
+    function btnC() { document.getElementById("display").value = "" };
+    function btn1() { document.getElementById("display").value += "1" };
+    function btn2() { document.getElementById("display").value += "2" };
+    function btn3() { document.getElementById("display").value += "3" };
+    function btn4() { document.getElementById("display").value += "4" };
+    function btn5() { document.getElementById("display").value += "5" };
+    function btn6() { document.getElementById("display").value += "6" };
+    function btn7() { document.getElementById("display").value += "7" };
+    function btn8() { document.getElementById("display").value += "8" };
+    function btn9() { document.getElementById("display").value += "9" };
+    function btn0() { document.getElementById("display").value += "0" };
+    function btnMulti() {
+        var display = document.getElementById("display").value
+        if (display[display.length -1] == "+" || display[display.length -1] == "-" || display[display.length -1] == "/" || display[display.length -1] == "*") {
+
+          display = display.slice(0, -1) + "*"
+
+        }
+        document.getElementById("display").value += "*"
+    };
+    function btnSub() { document.getElementById("display").value += "-" };
+    function btnAdd() { document.getElementById("display").value += "+" };
+    function btnEq() {
+        var results = eval(document.getElementById("display").value )
+        document.getElementById("display").value = results
+
+
+    };
     function btnDec() { document.getElementById("display").value += "." };
     function btnC() { document.getElementById("display").value = "" };
 </script>
@@ -56,68 +98,69 @@
 <div id="containment">
     <div id="draggable" class="ui-widget-content">
         <form>
+            <div>
+                <table>
 
-            <table>
-                <tr>
-                    
-                    <td colspan="4">
+                    <tr>
 
-                        <input name="display" id="display" value=""> 
+                        <td colspan="4">
 
-                    </td>
-                    
-                    
-                 </tr>
-                <tr>
+                            <input name="display" id="display" value="" disabled>
 
-                    <td> <input type="button" class="btn"  value="7" onclick="btn7()"></td>
-                    <td> <input type="button" class="btn"  value="8" onclick="btn8()"></td>
-                    <td> <input type="button" class="btn"  value="9" onclick="btn9()"></td>
-                    <td> <input type="button" class="btn"  value="x" onclick="btnMulti()"></td>
-
-                </tr>
+                        </td>
 
 
-                <tr>
+                    </tr>
 
-                    <td> <input type="button" class="btn"  value="4" onclick="btn4()"></td>
-                    <td> <input type="button" class="btn"  value="5" onclick="btn5()"></td>
-                    <td> <input type="button" class="btn"  value="6" onclick="btn6()"></td>
-                    <td> <input type="button" class="btn"  value="-" onclick="btnSub()"></td>
+                    <tr>
 
+                        <td> <input type="button" class="btn btn-outline-secondary" value="7" onclick="btn7()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="8" onclick="btn8()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="9" onclick="btn9()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="x" onclick="btnMulti()"></td>
 
-                </tr>
-
-                <tr>
-
+                    </tr>
 
 
-                    <td> <input type="button" class="btn"  value="1" onclick="btn1()"></td>
-                    <td> <input type="button" class="btn"  value="2" onclick="btn2()"></td>
-                    <td> <input type="button" class="btn"  value="3" onclick="btn3()"></td>
-                    <td> <input type="button" class="btn"  value="+" onclick="btnAdd()"></td>
+                    <tr>
+
+                        <td> <input type="button" class="btn btn-outline-secondary" value="4" onclick="btn4()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="5" onclick="btn5()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="6" onclick="btn6()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="-" onclick="btnSub()"></td>
 
 
-                </tr>
+                    </tr>
 
-                <tr>
-
-                    <td> <input type="button" class="btn"  value="." onclick="btnDec()"></td>
-                    <td> <input type="button" class="btn"  value="0" onclick="btn0()"></td>
-                    <td> <input type="button" class="btn"  value="C" onclick="btnC()"></td>
-                    <td> <input type="button" class="btn"  value="=" onclick="btnEq()"></td>
+                    <tr>
 
 
 
-                </tr>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="1" onclick="btn1()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="2" onclick="btn2()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="3" onclick="btn3()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="+" onclick="btnAdd()"></td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td> <input type="button" class="btn btn-outline-secondary" value="." onclick="btnDec()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="0" onclick="btn0()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="C" onclick="btnC()"></td>
+                        <td> <input type="button" class="btn btn-outline-secondary" value="=" onclick="btnEq()"></td>
+
+
+
+                    </tr>
 
 
 
 
+                </table>
 
-            </table>
-
-
+            </div>
 
 
 

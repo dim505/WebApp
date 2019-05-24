@@ -66,11 +66,27 @@ body {
 height: 100vh;
 }
 #draggable {
-	width: 150px; height: 150px; padding: 0.5em;
+	display: table;
 	border:solid black 1px;
+	padding: 20px;
+	transition: 0.3s;
+}
+
+#draggable:hover {
+	cursor: all-scroll;
+	border: 2px solid red;
+
 }
 
 
+
+
+.btn {
+	
+	width:100%;
+	
+	
+}
 /* styling for drop down */ 
 
 .Cssdropdown {
