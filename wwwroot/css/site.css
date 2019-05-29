@@ -68,8 +68,10 @@ height: 100vh;
 #draggable {
 	display: table;
 	border:solid black 1px;
+	border-radius: 5px;
 	padding: 20px;
 	transition: 0.3s;
+	
 }
 
 #draggable:hover {
@@ -79,6 +81,13 @@ height: 100vh;
 }
 
 
+#display {
+    border: 1px solid gray;
+    border-radius: 5px;
+	text-align:right;
+	background-color: white;
+
+}
 
 
 .btn {
