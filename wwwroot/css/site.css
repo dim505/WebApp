@@ -73,7 +73,7 @@ height: 100vh;
 	transition: 0.3s;
 	
 }
-
+/* */
 #draggable:hover {
 	cursor: all-scroll;
 	border: 2px solid red;
