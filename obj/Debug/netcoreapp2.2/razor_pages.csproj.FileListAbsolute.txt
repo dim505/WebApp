@@ -62,3 +62,4 @@ C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\obj\Debug\
 C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\obj\Debug\netcoreapp2.2\razor_pages.csproj.CopyComplete
 C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\obj\Debug\netcoreapp2.2\razor_pages.csprojAssemblyReference.cache
 C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\obj\Debug\netcoreapp2.2\Razor\Pages\JavaScriptCalc.g.cshtml.cs
+C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\obj\Debug\netcoreapp2.2\Razor\Pages\AMS.g.cshtml.cs
