@@ -94,6 +94,22 @@ height: 100vh;
 	
 	
 }
+/*styling to center images */ 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+.center:hover {
+	    border-style: solid;
+  border-color: red;
+	
+	
+}
+
 
 /* styling for drop down */ 
 
@@ -200,3 +216,68 @@ height: 100vh;
 	 
 	 
  }
+ 
+.AMS .carousel-control-prev-icon,
+.AMS .carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-image: none;
+}
+
+.AMS .carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.AMS .carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
+
+
+.AMS .carousel-caption {
+	color: black;
+	border: 3px solid;
+}
+
+
+.AMS .carousel-indicators li {
+	background-color: black;
+
+}
+
+.AMS .carousel-item img {
+	width: 1290px;
+	height: 720px; 
+	
+	
+	
+}
+
+
+/*make all text center on AMS page */ 
+
+.AMS p, .AMS h4, .AMS h1  {
+	
+	text-align: center;
+	
+}
+
+
+.AMS .owl-carousel img{
+	height: 450px;
+	width: 350px;
+	
+	
+}
+
+
+
+

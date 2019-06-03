@@ -3,15 +3,46 @@
 @{
 }
 
-    <body>
+<script>
+
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
+             });
 
 
+
+
+
+});
+
+
+
+</script>
+
+<body>
+
+    <div class="AMS">
         <h1>AMS OVERVIEW</h1>
 
 
         <p> I call my desktop application Academic Management System (AMS). I wrote this in VB.NET. This connects to a Microsoft SQL Server database. The master branch is version 1.3.1. The various functionalities of this application are the ability to add application users, teachers, students, and courses into the database, update the entities information, delete the entities, register students with their respective classes, run predefined reports, access control, and look up a student’s grades. This application also implements salting and hashing of passwords behind the scenes. </p>
 
-        <p> Here are some animations showing my application:</p>
+        <h4> Here are some animations showing my application:</h4>
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -128,17 +159,73 @@
 
         </div>
 
-       
-        <p>Here are some Screenshots of my application</p>
+
+        <h4>Here are some Screenshots of my application</h4>
+
+
+
+
+        <div class="owl-carousel owl-theme owl-loaded owl-drag">
 
 
 
 
 
-        <p> If Interested, please see my code</p>
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(-1806px, 0px, 0px); transition: all 0s ease 0s; width: 7226px;">
+                    <div class="owl-item cloned" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <div>
+                                <img src="~/AMSPic/mainscreen.PNG" alt="main screen">
+                            </div>
+                        </div>
+                    </div><div class="owl-item cloned" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <<div> <img src="~/AMSPic/Login.PNG" alt="Login"> </div>
+                        </div>
+                    </div><div class="owl-item cloned" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <h4>9</h4>
+                        </div>
+                    </div><div class="owl-item cloned" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <div> <img src="~/AMSPic/AddStu_TEA.PNG" alt="Add Student/Teacher"> </div>
+                        </div>
+                    </div><div class="owl-item cloned" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <div> <img src="~/AMSPic/CourRegist.PNG" alt="Course Registration"></div>
+                        </div>
+                    </div><div class="owl-item cloned" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <div> <img src="~/AMSPic/GradLookUp.PNG" alt="Grade Look Up"> </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <div> <img src="~/AMSPic/Rpt.PNG" alt="Predefined Reports"> </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <div> <img src="~/AMSPic/UpdateStu_Tea.PNG" alt="Updated Student/teacher/courses"> </div>
+                        </div>
+                    </div><div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <div> <img src="~/AMSPic/UsrMen.png" alt="User Menu"> </div>
+                        </div>
 
 
+                    </div>
+                </div>
+            </div>
 
 
+        </div>
 
-    </body>
+
+        <h4> If interested, please see my code</h4>
+
+        <a href="https://github.com/dim505/AMS"><img src="~/RegularPics/githublogo.png" title="Click Me to See Code" alt="github logo" class="center"></a>
+
+
+</div>
+
+</body>
