@@ -9,51 +9,58 @@
 
 
 
+<div class="float-right">
+
+    <h2 class="display-4 mb-0">Here is my Calculator!</h2>
+
+</div>
 
 
 
 
-<h1>Here is my Calculator! Written in C#,HTML and CSS</h1>
+<div style="clear:right;" class="float-right">
+    <h3 class="blockquote-footer">This server side calculator is written in C#,HTML and CSS. All the calculations are done on the server. The framework that powers this calculator is ASP.NET Core Razor Pages. Please click <a href="https://github.com/dim505/WebApp/blob/master/Pages/Calculator.cshtml"> here </a> and <a href="https://github.com/dim505/WebApp/blob/master/Pages/Calculator.cshtml.cs"> here </a> for the source code!</h3>
+</div>
 
-
+<div class="calc float-left">
     <form method="post">
 
 
         <div class="title">C# Calculator</div>
-        <div class="calc">
-            <table border="1">
-                <tr>
-                    <td colspan="3"><input asp-for="ResultInfo" /></td>
 
-                    <td><input type="submit" value="c" asp-page-handler="Calculate" asp-route-BtnVal="C" /> </td>
-                </tr>
-                <tr>
+        <table border="1">
+            <tr>
+                <td colspan="3"><input asp-for="ResultInfo" /></td>
 
-                    <td><input type="submit" value="1" asp-page-handler="Calculate" asp-route-BtnVal="1" /> </td>
-                    <td><input type="submit" value="2" asp-page-handler="Calculate" asp-route-BtnVal="2" /> </td>
-                    <td><input type="submit" value="3" asp-page-handler="Calculate" asp-route-BtnVal="3" /> </td>
-                    <td><input type="submit" value="/" asp-page-handler="Calculate" asp-route-BtnVal="/" /> </td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="4" asp-page-handler="Calculate" asp-route-BtnVal="4" /> </td>
-                    <td><input type="submit" value="5" asp-page-handler="Calculate" asp-route-BtnVal="5" /> </td>
-                    <td><input type="submit" value="6" asp-page-handler="Calculate" asp-route-BtnVal="6" /> </td>
-                    <td><input type="submit" value="–" asp-page-handler="Calculate" asp-route-BtnVal="–" /> </td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="7" asp-page-handler="Calculate" asp-route-BtnVal="7" /> </td>
-                    <td><input type="submit" value="8" asp-page-handler="Calculate" asp-route-BtnVal="8" /> </td>
-                    <td><input type="submit" value="9" asp-page-handler="Calculate" asp-route-BtnVal="9" /> </td>
-                    <td><input type="submit" value="+" asp-page-handler="Calculate" asp-route-BtnVal="+" /> </td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="." asp-page-handler="Calculate" asp-route-BtnVal="." /> </td>
-                    <td><input type="submit" value="0" asp-page-handler="Calculate" asp-route-BtnVal="0" /> </td>
+                <td><input type="submit" value="c" asp-page-handler="Calculate" asp-route-BtnVal="C" /> </td>
+            </tr>
+            <tr>
 
-                    <td><input type="submit" value="=" asp-page-handler="Calculate" asp-route-BtnVal="=" /> </td>
-                    <td><input type="submit" value="*" asp-page-handler="Calculate" asp-route-BtnVal="*" /> </td>
-                </tr>
-            </table>
-        </div>
+                <td><input type="submit" value="1" asp-page-handler="Calculate" asp-route-BtnVal="1" /> </td>
+                <td><input type="submit" value="2" asp-page-handler="Calculate" asp-route-BtnVal="2" /> </td>
+                <td><input type="submit" value="3" asp-page-handler="Calculate" asp-route-BtnVal="3" /> </td>
+                <td><input type="submit" value="/" asp-page-handler="Calculate" asp-route-BtnVal="/" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="4" asp-page-handler="Calculate" asp-route-BtnVal="4" /> </td>
+                <td><input type="submit" value="5" asp-page-handler="Calculate" asp-route-BtnVal="5" /> </td>
+                <td><input type="submit" value="6" asp-page-handler="Calculate" asp-route-BtnVal="6" /> </td>
+                <td><input type="submit" value="–" asp-page-handler="Calculate" asp-route-BtnVal="–" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="7" asp-page-handler="Calculate" asp-route-BtnVal="7" /> </td>
+                <td><input type="submit" value="8" asp-page-handler="Calculate" asp-route-BtnVal="8" /> </td>
+                <td><input type="submit" value="9" asp-page-handler="Calculate" asp-route-BtnVal="9" /> </td>
+                <td><input type="submit" value="+" asp-page-handler="Calculate" asp-route-BtnVal="+" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="." asp-page-handler="Calculate" asp-route-BtnVal="." /> </td>
+                <td><input type="submit" value="0" asp-page-handler="Calculate" asp-route-BtnVal="0" /> </td>
+
+                <td><input type="submit" value="=" asp-page-handler="Calculate" asp-route-BtnVal="=" /> </td>
+                <td><input type="submit" value="*" asp-page-handler="Calculate" asp-route-BtnVal="*" /> </td>
+            </tr>
+        </table>
+
     </form>
-
+</div>

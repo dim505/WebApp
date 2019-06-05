@@ -64,6 +64,8 @@ body {
 /*containment div for draggable javascript calc*/
 #containment {
 height: 100vh;
+width:100%;
+
 }
 #draggable {
 	display: table;
@@ -79,6 +81,16 @@ height: 100vh;
 	border: 2px solid red;
 
 }
+
+
+#IndexDivText {
+	width:100%; 
+	text-align:right;
+	z-index:2;
+	
+	
+}
+
 
 #display {
     border: 1px solid gray;
@@ -204,7 +216,7 @@ height: 100vh;
  } 
 
  /*override Bootstrap css for nav buttons*/
- .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+ .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus{
 	 color:red;
 	 transition: color 400ms linear;
 	 
@@ -261,6 +273,11 @@ height: 100vh;
 	
 }
 
+.blockquote-footer {
+	font-size:100%;
+	
+	
+}
 
 /*make all text center on AMS page */ 
 
@@ -271,7 +288,7 @@ height: 100vh;
 }
 
 
-.AMS .owl-carousel img{
+.AMS .owl-stage-outer img{
 	height: 450px;
 	width: 350px;
 	

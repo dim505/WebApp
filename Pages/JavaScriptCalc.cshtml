@@ -4,15 +4,15 @@
 }
 
 
-    <script>
-        debugger;
+<script>
+    debugger;
 
-        $(function () {
+    $(function () {
 
-        //gets draggable div positions fron local storage 
-            var sPositions = localStorage.positions || "{}",
-            //gets positions and converts to object 
-                positions = JSON.parse(sPositions);
+        //gets draggable div positions fron local storage
+        var sPositions = localStorage.positions || "{}",
+            //gets positions and converts to object
+            positions = JSON.parse(sPositions);
         //loops through and sets the position for div
         $.each(positions, function (id, pos) {
             $("#" + id).css(pos);
@@ -26,7 +26,7 @@
             scroll: false,
             //initialed when dragging stops
             stop: function (event, ui) {
-                //gets the current div position and saves it 
+                //gets the current div position and saves it
                 positions[this.id] = ui.position;
                 //stores it in local storage
                 localStorage.positions = JSON.stringify(positions);
@@ -35,7 +35,7 @@
     });
 
 
-    //each button pressed has its own function witch adds its value to the display string 
+    //each button pressed has its own function witch adds its value to the display string
     function btn1() { document.getElementById("display").value += "1" };
     function btn2() { document.getElementById("display").value += "2" };
     function btn3() { document.getElementById("display").value += "3" };
@@ -47,71 +47,71 @@
     function btn9() { document.getElementById("display").value += "9" };
     function btn0() { document.getElementById("display").value += "0" };
 
-        function btnMulti() {
+    function btnMulti() {
         //gets value of current display
         var display = document.getElementById("display").value
         //checks to see if * was pressed when the display is blank
-            if (display == "") {
+        if (display == "") {
             //sets default value
             display = "0*"
             //gets the display value
             document.getElementById("display").value = display
-            }
+        }
         //checks to see if the the operation sign was pressed mutliple times
         else if (display[display.length - 1] == "+" || display[display.length - 1] == "-" || display[display.length - 1] == "/" || display[display.length - 1] == "*") {
-            //extracts the display minus the last sign pressed and adds the * sign incase the operation sign was pressed multiple times 
-                display = display.slice(0, -1) + "*"
-            //sets the displays value 
-                document.getElementById("display").value = display
-        //if just a nummber, the * sign gets appended
+            //extracts the display minus the last sign pressed and adds the * sign incase the operation sign was pressed multiple times
+            display = display.slice(0, -1) + "*"
+            //sets the displays value
+            document.getElementById("display").value = display
+            //if just a nummber, the * sign gets appended
         } else { document.getElementById("display").value += "*" }
     };
-        function btnSub() {
+    function btnSub() {
         //gets value of current display
-            var display = document.getElementById("display").value
+        var display = document.getElementById("display").value
         //checks to see if - was pressed when the display is blank
-            if (display == "") {
+        if (display == "") {
             //sets new  default value
-                display = "0-"
+            display = "0-"
             //sets display value
             document.getElementById("display").value = display
-            }
-            //checks to see if the the operation sign was pressed mutliple times
+        }
+        //checks to see if the the operation sign was pressed mutliple times
         if (display[display.length - 1] == "+" || display[display.length - 1] == "-" || display[display.length - 1] == "/" || display[display.length - 1] == "*") {
             //extracts the display minus the last sign pressed and adds the - sign incase the operation sign was pressed BEFORE
             display = display.slice(0, -1) + "-"
-            //sets the displays value 
+            //sets the displays value
             document.getElementById("display").value = display
-        //if just a nummber, the * sign gets appended
+            //if just a nummber, the * sign gets appended
         } else { document.getElementById("display").value += "-" }
     };
-        function btnAdd() {
+    function btnAdd() {
         //gets value of current display
-            var display = document.getElementById("display").value
+        var display = document.getElementById("display").value
         //checks to see if - was pressed when the display is blank
-            if (display == "") {
-        //sets new  default value
-                display = "0+"
-        //sets display value
-                document.getElementById("display").value = display
-            }
+        if (display == "") {
+            //sets new  default value
+            display = "0+"
+            //sets display value
+            document.getElementById("display").value = display
+        }
         //checks to see if the the operation sign was pressed mutliple times
         if (display[display.length - 1] == "+" || display[display.length - 1] == "-" || display[display.length - 1] == "/" || display[display.length - 1] == "*") {
-         //extracts the display minus the last sign pressed and adds the + sign incase the operation sign was pressed BEFORE
+            //extracts the display minus the last sign pressed and adds the + sign incase the operation sign was pressed BEFORE
             display = display.slice(0, -1) + "+"
-            //sets the displays value 
+            //sets the displays value
             document.getElementById("display").value = display
-         //if just a nummber, the + sign gets appended
+            //if just a nummber, the + sign gets appended
         } else { document.getElementById("display").value += "+" }
     };
 
-        function btnDiv() {
+    function btnDiv() {
         //gets value of current display
-            var display = document.getElementById("display").value
+        var display = document.getElementById("display").value
         //checks to see if - was pressed when the display is blank
-            if (display == "") {
+        if (display == "") {
             //sets new  default value
-                display = "0/"
+            display = "0/"
             //sets display value
             document.getElementById("display").value = display
         }
@@ -120,28 +120,28 @@
         if (display[display.length - 1] == "+" || display[display.length - 1] == "-" || display[display.length - 1] == "/" || display[display.length - 1] == "*") {
             //extracts the display minus the last sign pressed and adds the - sign incase the operation sign was pressed BEFORE
             display = display.slice(0, -1) + "/"
-            //sets the displays value 
-            document.getElementById("display").value  = display
+            //sets the displays value
+            document.getElementById("display").value = display
         } else { document.getElementById("display").value += "/" }
-    }; 
+    };
 
-        function btnEq() {
+    function btnEq() {
         //display string gets evaluated
-            var results = eval(document.getElementById("display").value)
+        var results = eval(document.getElementById("display").value)
         //returns the results
         document.getElementById("display").value = results
 
 
     };
 
-        function btnC() {
-            //clears the display
-            document.getElementById("display").value = ""
-        };
+    function btnC() {
+        //clears the display
+        document.getElementById("display").value = ""
+    };
 
-    //Jquery pop over function targeting divs that have data toggle pop over set 
+    //Jquery pop over function targeting divs that have data toggle pop over set
     $(function () {
-  $('[data-toggle="popover"]').popover()
+        $('[data-toggle="popover"]').popover()
     })
 
 
@@ -149,86 +149,98 @@
 </script>
 
 
+<div class="float-right">
 
-<h1>Here is my Javascript Calculator! Written in Javascript,HTML and CSS</h1>
+    <h2 class="display-4 mb-0">Here is my Javascript Calculator! </h2>
 
-
-<div id="containment">
-
-        <div id="draggable" class="ui-widget-content" data-toggle="popover" data-placement="top" data-content="DRAG ME!!" data-trigger="hover">
-            <form>
-                <div>
-                    <table>
-
-                        <tr>
-
-                            <td colspan="4">
-
-                                <input name="display" id="display" value="" disabled>
-
-                            </td>
-
-
-                        </tr>
-
-                        <tr>
-
-                            <td> <input type="button" class="btn btn-outline-success" value="7" onclick="btn7()"></td>
-                            <td> <input type="button" class="btn btn-outline-success" value="8" onclick="btn8()"></td>
-                            <td> <input type="button" class="btn btn-outline-success" value="9" onclick="btn9()"></td>
-                            <td> <input type="button" class="btn btn-outline-dark" value="x" onclick="btnMulti()"></td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td> <input type="button" class="btn btn-outline-success" value="4" onclick="btn4()"></td>
-                            <td> <input type="button" class="btn btn-outline-success" value="5" onclick="btn5()"></td>
-                            <td> <input type="button" class="btn btn-outline-success" value="6" onclick="btn6()"></td>
-                            <td> <input type="button" class="btn btn-outline-dark" value="-" onclick="btnSub()"></td>
-
-
-                        </tr>
-
-                        <tr>
-
-
-
-                            <td> <input type="button" class="btn btn-outline-success" value="1" onclick="btn1()"></td>
-                            <td> <input type="button" class="btn btn-outline-success" value="2" onclick="btn2()"></td>
-                            <td> <input type="button" class="btn btn-outline-success" value="3" onclick="btn3()"></td>
-                            <td> <input type="button" class="btn btn-outline-dark" value="+" onclick="btnAdd()"></td>
-
-
-                        </tr>
-
-                        <tr>
-
-                            <td> <input type="button" class="btn btn-outline-primary" value="C" onclick="btnC()"></td>
-
-                            <td> <input type="button" class="btn btn-outline-success" value="0" onclick="btn0()"></td>
-                            <td> <input type="button" class="btn btn-outline-primary" value="=" onclick="btnEq()"></td>
-
-                            <td> <input type="button" class="btn btn-outline-dark" value="/" onclick="btnDiv()"></td>
-
-
-                        </tr>
+</div>
 
 
 
 
-                    </table>
-
-                </div>
-
-
+<div style="clear:right;" class="float-right">
+    <h3 class="blockquote-footer">This is written in Javascript, HTML, and CSS with elements of JQuery and Popper JS.  This is a client-side calculator that is draggable. It also remembers the drag location even after a page refresh. All calculations are done on the client's browser.  <a href="https://github.com/dim505/WebApp/blob/master/Pages/JavaScriptCalc.cshtml"> Please click here for the source code!</a> </h3>
+</div>
 
 
-            </form>
 
-        </div>
- 
+
+<div id="containment" class="float-left">
+
+    <div id="draggable" class="ui-widget-content" data-toggle="popover" data-placement="top" data-content="DRAG ME!!" data-trigger="hover">
+        <form>
+            <div>
+                <table>
+
+                    <tr>
+
+                        <td colspan="4">
+
+                            <input name="display" id="display" value="" disabled>
+
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td> <input type="button" class="btn btn-outline-success" value="7" onclick="btn7()"></td>
+                        <td> <input type="button" class="btn btn-outline-success" value="8" onclick="btn8()"></td>
+                        <td> <input type="button" class="btn btn-outline-success" value="9" onclick="btn9()"></td>
+                        <td> <input type="button" class="btn btn-outline-dark" value="x" onclick="btnMulti()"></td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td> <input type="button" class="btn btn-outline-success" value="4" onclick="btn4()"></td>
+                        <td> <input type="button" class="btn btn-outline-success" value="5" onclick="btn5()"></td>
+                        <td> <input type="button" class="btn btn-outline-success" value="6" onclick="btn6()"></td>
+                        <td> <input type="button" class="btn btn-outline-dark" value="-" onclick="btnSub()"></td>
+
+
+                    </tr>
+
+                    <tr>
+
+
+
+                        <td> <input type="button" class="btn btn-outline-success" value="1" onclick="btn1()"></td>
+                        <td> <input type="button" class="btn btn-outline-success" value="2" onclick="btn2()"></td>
+                        <td> <input type="button" class="btn btn-outline-success" value="3" onclick="btn3()"></td>
+                        <td> <input type="button" class="btn btn-outline-dark" value="+" onclick="btnAdd()"></td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td> <input type="button" class="btn btn-outline-primary" value="C" onclick="btnC()"></td>
+
+                        <td> <input type="button" class="btn btn-outline-success" value="0" onclick="btn0()"></td>
+                        <td> <input type="button" class="btn btn-outline-primary" value="=" onclick="btnEq()"></td>
+
+                        <td> <input type="button" class="btn btn-outline-dark" value="/" onclick="btnDiv()"></td>
+
+
+                    </tr>
+
+
+
+
+                </table>
+
+            </div>
+
+
+
+
+        </form>
+
+    </div>
+
 </div>
 
 
