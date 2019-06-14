@@ -97,3 +97,4 @@ C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\main_portf
 C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\main_portfolio\obj\Debug\netcoreapp2.2\MyApp.Namespace.dll
 C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\main_portfolio\obj\Debug\netcoreapp2.2\MyApp.Namespace.pdb
 C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\main_portfolio\obj\Debug\netcoreapp2.2\razor_pages.csproj.CopyComplete
+C:\Users\bob\Documents\Visual Studio 2015\Projects\razor_pages\WebApp\main_portfolio\obj\Debug\netcoreapp2.2\Razor\Pages\ReactWebStore.g.cshtml.cs
