@@ -40,21 +40,37 @@
     <script src="~/OwlCarousel/docs/assets/owlcarousel/owl.carousel.min.js"></script>
 
     <script>
+
+       
+
+
+
+        debugger;
     //gets the html path file path
         var path = window.location.pathname;
     //extracts only the page name
         var page = path.split("/").pop();
 
-    //checks to see if page is calculator. Do not want effect on server side calculator
-        if (page !== "Calculator") {
+
+
+            
+            
+
+        $(window).on('load', function () {
+
+            //MAKES THE PRELOADER DISAPPEAR
+            $('.preloader').fadeOut(2000);
+     
+
+                //checks to see if page is calculator. Do not want effect on server side calculator
+            if (page !== "Calculator") {
+
+                 //get body to invisible and fades in 
+                $('body').css('display', 'none').fadeIn(800);
+            }
+        }); 
         
-            $(document).ready(function () {
-        //get body to invisible and fades in at 500 ms
-        $('body').css('display', 'none').fadeIn(800);
-         });
-
-
-        }
+      
 
 
             //Jquery pop over function targeting divs that have data toggle pop over set
@@ -67,92 +83,105 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 ">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">My Portfolio</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-              
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse dropdown">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
-                        </li>
+    <div class="preloader"> </div>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 ">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index">My Portfolio</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
 
-
-
-                        <li class="nav-item">
-                            <div class="Cssdropdown">
-                                <button class="dropbtn" type="button" data-toggle="dropdown">Calculators<span class="caret"></span> </button>
-
-                                <ul class="dropdown-content">
-                                    <li><a asp-area="" asp-page="/Calculator">C#</a></li>
-                                    <li><a asp-area="" asp-page="/JavaScriptCalc">Javascript</a></li>
-                                </ul>
-                            </div>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/AMS">AMS</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/ReactWebStore">React JS Webstore</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/about">About</a>
-                        </li>
-
-
-
-                    </ul>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse dropdown">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                            </li>
 
 
 
 
+                            <li class="nav-item">
+                                <div class="Cssdropdown">
+                                    <button class="dropbtn" type="button" data-toggle="dropdown">Calculators<span class="caret"></span> </button>
+
+                                    <ul class="dropdown-content">
+                                        <li><a asp-area="" asp-page="/Calculator">C#</a></li>
+                                        <li><a asp-area="" asp-page="/JavaScriptCalc">Javascript</a></li>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/AMS">AMS</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <div class="Cssdropdown">
+                                    <button class="dropbtn" type="button" data-toggle="dropdown">React JS<span class="caret"></span> </button>
+
+                                    <ul class="dropdown-content">
+                                        <li><a asp-area="" asp-page="/ReactJsWeatherApp">Weather App</a></li>
+                                        <li><a asp-area="" asp-page="/ReactWebStore">Webstore</a></li>
+                                    </ul>
+                                </div>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/about">About</a>
+                            </li>
+
+
+
+                        </ul>
+
+
+
+
+
+                    </div>
 
                 </div>
+            </nav>
+        </header>
+        <div class="container">
+            <partial name="_CookieConsentPartial" />
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; Copyright 2019 Dmitriy  Visit My <a href="https://github.com/dim505">Github</a> or <a href="https://www.linkedin.com/in/dmitriy-komerzan-4538a9b7">Linkedin</a>
+
 
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
- 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; Copyright 2019 Dmitriy  Visit My <a href="https://github.com/dim505">Github</a> or <a href="https://www.linkedin.com/in/dmitriy-komerzan-4538a9b7">Linkedin</a> 
+        </footer>
 
+        <environment include="Development">
 
-</div>
-    </footer>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        </environment>
+        <environment exclude="Development">
 
-    <environment include="Development">
-        
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
-    <environment exclude="Development">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+            </script>
+        </environment>
+        <script src="~/js/site.js" asp-append-version="true"></script>
 
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
-    </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @RenderSection("Scripts", required: false)
+        @RenderSection("Scripts", required: false)
+    
 </body>
 </html>
