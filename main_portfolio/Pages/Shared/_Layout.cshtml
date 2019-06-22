@@ -45,21 +45,45 @@
 
 
 
-        debugger;
+       
     //gets the html path file path
         var path = window.location.pathname;
     //extracts only the page name
         var page = path.split("/").pop();
 
+        //gets curr date in mm
+         var CurrDate = new Date().getTime();
+
+	   //compares if user visited the website since the last session
+        if ( typeof sessionStorage.getItem("LastLoad") !== 'string') {
+			
+           //if no, it will set a time stamp of lasted visited 
+           sessionStorage.setItem("LastLoad", CurrDate)
 
 
-            
-            
+        }
+
+        // calulates diff from last visit time to current visit time
+        var diff = ((CurrDate - sessionStorage.getItem("LastLoad")) / 1000) / 3600
+
+        //if diff is greater than 1 hr or first time visiting load preloader
+		if (diff > 1 || diff === 0) {
+		
+            $(document).ready(function () {
+            //loads preloader 
+             $('.preloader').css('display', 'block').delay(8000).fadeOut(2000)
+                });
+        
+		 debugger
+		
+		
+		
+		}
+        
 
         $(window).on('load', function () {
 
-            //MAKES THE PRELOADER DISAPPEAR
-            $('.preloader').fadeOut(2000);
+
      
 
                 //checks to see if page is calculator. Do not want effect on server side calculator
