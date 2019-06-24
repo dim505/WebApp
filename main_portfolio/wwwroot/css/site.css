@@ -270,8 +270,7 @@ width:100%;
 
 .AMS .carousel-item img {
 	width: 1290px;
-	height: 720px; 
-	
+
 	
 	
 }
@@ -292,13 +291,22 @@ width:100%;
 
 /*styling for mini picture carousel on AMS page */ 
 .AMS .owl-stage-outer img{
-	height: 450px;
+	height: 380px;
 	width: 350px;
 	
 	
 }
 
+/* set body to display none for the fade effects to work correctly */
+body {
+	display: none;
+	
+	
+	
+	
+}
 
+/*styling for website preloader */
 
 .preloader {
    position: absolute;

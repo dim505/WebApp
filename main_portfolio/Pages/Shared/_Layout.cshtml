@@ -70,28 +70,35 @@
 		if (diff > 1 || diff === 0) {
 		
             $(document).ready(function () {
-            //loads preloader 
-             $('.preloader').css('display', 'block').delay(8000).fadeOut(2000)
-                });
+              //fades preloader out
+                $('.preloader').css('display', 'block').delay(5000).fadeOut(2000)
+            //fades body in 
+                $('body').fadeIn(800);
+              });
         
 		 debugger
 		
 		
 		
-		}
+		} 
         
 
-        $(window).on('load', function () {
+       $(document).ready(function () {
 
 
      
 
-                //checks to see if page is calculator. Do not want effect on server side calculator
-            if (page !== "Calculator") {
+           //checks to see if page is calculator. Do not want effect on server side calculator
+           if (page !== "Calculator") {
 
-                 //get body to invisible and fades in 
-                $('body').css('display', 'none').fadeIn(800);
-            }
+           //Fades body in for all other pages 
+           //  $('body').css('display', 'none').fadeIn(800);
+               $('body').fadeIn(800);
+           } else {
+               //displays body for C# calculator page (no fade)
+               $('body').css('display', 'block')
+
+           }
         }); 
         
       
