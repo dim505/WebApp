@@ -52,6 +52,41 @@
 
 
     <script>
+        debugger
+
+
+        window.onresize = function() {
+
+            if (window.innerWidth < 575 || screen.width < 575) {
+                $('.caret').css('display', 'contents')
+                $('.dropbtn').css('padding-left', '0px')
+
+
+
+            } else if ((window.innerWidth > 575 && window.innerWidth < 767) ) {
+                $('.caret').css('display', 'inline')
+                $('.dropbtn').css('padding-top', '7px')
+                $('.dropbtn').css('padding-left', '7px')
+                $('.dropbtn').css('padding-bottom', '7px')
+                $('.dropbtn').css('height', '35px')
+
+
+
+
+
+        }
+        else if (window.innerWidth > 767) {
+                $('.caret').css('display', 'inline')
+                $('.dropbtn').css('padding-top', '8px')
+                $('.dropbtn').css('padding-left', '8px')
+                $('.dropbtn').css('padding-bottom', '8px')
+                $('.dropbtn').css('height', '37px')
+
+
+            }
+        };
+
+
 
 
         // detects version of chrome
@@ -91,7 +126,7 @@
         if (diff > 1 || diff === 0) {
 
             //checks if firefox/chrome and not home page, undesired preloader bahavior in chrome and firefox browsers
-            if ((isChrome > 0 && page !== "/") || (isFirefox > 0 && page !== "")) {
+            if ((isChrome > 0 && page !== "") || (isFirefox > 0 && page !== "")) {
 
                 $(document).ready(function () {
                     //reduces preloader fade out time
@@ -128,9 +163,39 @@
         $(document).ready(function () {
 
 
+            
 
 
-            //checks to see if page is calculator. Do not want effect on server side calculator
+                    if (screen.width < 575) {
+            
+                $('.caret').css('display', 'contents')
+                $('.dropbtn').css('padding-left', '0px')
+
+                        
+
+            }
+
+            
+                    else if ((screen.width  > 575 && screen.width  < 767)) {
+            
+                    $('.caret').css('display', 'inline')
+                    $('.dropbtn').css('padding-top', '7px')
+                    $('.dropbtn').css('padding-left', '7px')
+                    $('.dropbtn').css('padding-bottom', '7px')
+                    $('.dropbtn').css('height', '35px')
+
+            }
+        
+
+                else if (screen.width > 767) {
+                    $('.caret').css('display', 'inline')
+                    $('.dropbtn').css('padding-top', '8px')
+                    $('.dropbtn').css('padding-left', '8px')
+                    $('.dropbtn').css('padding-bottom', '8px')
+                    $('.dropbtn').css('height', '37px')
+
+                }
+         //checks to see if page is calculator. Do not want effect on server side calculator
             if (page !== "Calculator") {
 
                 //Fades body in for all other pages
