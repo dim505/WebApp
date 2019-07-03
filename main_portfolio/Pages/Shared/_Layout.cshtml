@@ -55,12 +55,20 @@
         debugger
 
 
+
         window.onresize = function() {
 
             if (window.innerWidth < 575 || screen.width < 575) {
-                $('.caret').css('display', 'contents')
-                $('.dropbtn').css('padding-left', '0px')
-
+                    if (isIE()) {
+                        $('.caret').css('border-top', '5px solid white')
+                        $('.dropbtn').css('padding-left', '0px')
+                        $('.dropbtn').css('padding-right', '0px')
+                        
+                    }else{
+                        $('.caret').css('display', 'contents')
+                        $('.dropbtn').css('padding-left', '0px')
+                        $('.dropbtn').css('padding-right', '0px')
+                    }
 
 
             } else if ((window.innerWidth > 575 && window.innerWidth < 767) ) {
@@ -69,6 +77,8 @@
                 $('.dropbtn').css('padding-left', '7px')
                 $('.dropbtn').css('padding-bottom', '7px')
                 $('.dropbtn').css('height', '35px')
+                $('.dropbtn').css('padding-right', '16px')
+                $('.caret').css('border-top', '5px solid black')
 
 
 
@@ -81,12 +91,21 @@
                 $('.dropbtn').css('padding-left', '8px')
                 $('.dropbtn').css('padding-bottom', '8px')
                 $('.dropbtn').css('height', '37px')
-
+                $('.dropbtn').css('padding-right', '16px')
+                $('.caret').css('border-top', '5px solid black')
 
             }
         };
 
 
+        /* Sample function that returns boolean in case the browser is Internet Explorer*/
+        function isIE() {
+          ua = navigator.userAgent;
+          /* MSIE used to detect old browsers and Trident used to newer ones*/
+          var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+  
+          return is_ie; 
+        }
 
 
         // detects version of chrome
@@ -142,9 +161,10 @@
 
                 $(document).ready(function () {
                     //fades preloader out
-                    $('.preloader').css('display', 'block').delay(5000).fadeOut(2000)
+                    $('.preloader').css('display', 'block').delay(4000).fadeOut(2000)
                     //fades body in
                     $('body').fadeIn(800);
+                    $('.alert').css('display', 'block').delay(30000).fadeOut(1000)
                 });
 
 
@@ -166,34 +186,47 @@
             
 
 
-                    if (screen.width < 575) {
+                    if (screen.width < 575 || window.innerWidth < 575) {
             
-                $('.caret').css('display', 'contents')
-                $('.dropbtn').css('padding-left', '0px')
+
+
+                        if (isIE()) {
+                        $('.caret').css('border-top', '5px solid white')
+                        $('.dropbtn').css('padding-left', '0px')
+                        $('.dropbtn').css('padding-right', '0px')
+                        
+                    }else{
+                        $('.caret').css('display', 'contents')
+                        $('.dropbtn').css('padding-left', '0px')
+                        $('.dropbtn').css('padding-right', '0px')
+                    }
 
                         
 
             }
 
             
-                    else if ((screen.width  > 575 && screen.width  < 767)) {
+                    else if ((screen.width  > 575 && screen.width  < 767) || (window.innerWidth > 575 && window.innerWidth < 767)) {
             
                     $('.caret').css('display', 'inline')
                     $('.dropbtn').css('padding-top', '7px')
                     $('.dropbtn').css('padding-left', '7px')
                     $('.dropbtn').css('padding-bottom', '7px')
+                    $('.dropbtn').css('padding-right', '16px')
                     $('.dropbtn').css('height', '35px')
 
+                    $('.caret').css('border-top', '5px solid black')
             }
         
 
-                else if (screen.width > 767) {
+                else if (screen.width > 767 || window.innerWidth > 767) {
                     $('.caret').css('display', 'inline')
                     $('.dropbtn').css('padding-top', '8px')
                     $('.dropbtn').css('padding-left', '8px')
                     $('.dropbtn').css('padding-bottom', '8px')
+                    $('.dropbtn').css('padding-right', '16px')
                     $('.dropbtn').css('height', '37px')
-
+                    $('.caret').css('border-top', '5px solid black')
                 }
          //checks to see if page is calculator. Do not want effect on server side calculator
             if (page !== "Calculator") {
@@ -290,6 +323,12 @@
             </nav>
         </header>
         <div class="container">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>Warning!!</strong> For the best user experience. Please use a modern browser like Mozilla Firefox, Chrome, Edge or Opera. Please refrain from using Internet Explorer or in private browsing.
+            </div>
             <partial name="_CookieConsentPartial" />
             <main role="main" class="pb-3">
                 @RenderBody()
