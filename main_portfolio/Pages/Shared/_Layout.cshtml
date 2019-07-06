@@ -55,11 +55,15 @@
         debugger
 
 
-
+        //on a window resize event, this function is exicuted
         window.onresize = function() {
 
+            //checks to see if window width is 575 or less
             if (window.innerWidth < 575 || screen.width < 575) {
-                    if (isIE()) {
+
+                    //handles differently if IE or Edge
+                if (isIE() || (isEdge > -1)) {
+                        //optimizes drop down for screen size
                         $('.caret').css('border-top', '5px solid white')
                         $('.dropbtn').css('padding-left', '0px')
                         $('.dropbtn').css('padding-right', '0px')
@@ -70,8 +74,10 @@
                         $('.dropbtn').css('padding-right', '0px')
                     }
 
+                //checks to see if window width is between 575 and 767
+            } else if ((window.innerWidth > 575 && window.innerWidth < 767)) {
 
-            } else if ((window.innerWidth > 575 && window.innerWidth < 767) ) {
+                //optimizes drop down for screen size
                 $('.caret').css('display', 'inline')
                 $('.dropbtn').css('padding-top', '7px')
                 $('.dropbtn').css('padding-left', '7px')
@@ -84,8 +90,9 @@
 
 
 
-        }
-        else if (window.innerWidth > 767) {
+        } //checks to see if window width is 767 or higher
+            else if (window.innerWidth > 767) {
+                //optimizes drop down for screen size
                 $('.caret').css('display', 'inline')
                 $('.dropbtn').css('padding-top', '8px')
                 $('.dropbtn').css('padding-left', '8px')
@@ -98,7 +105,7 @@
         };
 
 
-        /* Sample function that returns boolean in case the browser is Internet Explorer*/
+        // function checks if browser IE
         function isIE() {
           ua = navigator.userAgent;
           /* MSIE used to detect old browsers and Trident used to newer ones*/
@@ -114,6 +121,8 @@
         // detects version of firefox
         var isFirefox = navigator.userAgent.search("Firefox");
 
+        // detects version of Edge
+         var isEdge =  window.navigator.userAgent.indexOf("Edg")
 
 
 
@@ -154,7 +163,15 @@
                     $('body').fadeIn(800);
                 });
 
+                //checks if diff is greater than 1 
+                if (diff > 1) {
 
+                    //sets last visited time to a smaller number so the diff will be smaller. this wont cause the page to constantly show the preloader with each refresh
+                    sessionStorage.setItem("LastLoad", CurrDate + 1000000)
+
+
+
+                }
 
 
             } else {
@@ -164,7 +181,14 @@
                     $('.preloader').css('display', 'block').delay(4000).fadeOut(2000)
                     //fades body in
                     $('body').fadeIn(800);
-                    $('.alert').css('display', 'block').delay(30000).fadeOut(1000)
+
+                    //displays my alert div if user is using IE
+                    if (isIE()) {
+                        
+                        $('.alert').css('display', 'block').delay(30000).fadeOut(1000)
+
+                    }
+                    
                 });
 
 
@@ -184,13 +208,13 @@
 
 
             
-
-
+                    //checks screensize on initial screen load
                     if (screen.width < 575 || window.innerWidth < 575) {
             
 
-
+                        //checks if IE
                         if (isIE()) {
+                         //optimizes drop down
                         $('.caret').css('border-top', '5px solid white')
                         $('.dropbtn').css('padding-left', '0px')
                         $('.dropbtn').css('padding-right', '0px')
@@ -205,9 +229,9 @@
 
             }
 
-            
+                      //checks screensize on initial screen load
                     else if ((screen.width  > 575 && screen.width  < 767) || (window.innerWidth > 575 && window.innerWidth < 767)) {
-            
+                    //optimizes drop down
                     $('.caret').css('display', 'inline')
                     $('.dropbtn').css('padding-top', '7px')
                     $('.dropbtn').css('padding-left', '7px')
@@ -218,8 +242,10 @@
                     $('.caret').css('border-top', '5px solid black')
             }
         
-
-                else if (screen.width > 767 || window.innerWidth > 767) {
+                
+                 //checks screensize on initial screen load
+                    else if (screen.width > 767 || window.innerWidth > 767) {
+                    //optimizes drop down
                     $('.caret').css('display', 'inline')
                     $('.dropbtn').css('padding-top', '8px')
                     $('.dropbtn').css('padding-left', '8px')
