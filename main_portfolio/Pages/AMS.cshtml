@@ -27,9 +27,31 @@
         });
 
 
-
-
-
+     $('.zoom-gallery').magnificPopup({
+		            delegate: 'a',
+		            type: 'image',
+		            closeOnContentClick: false,
+		            closeBtnInside: false,
+		            mainClass: 'mfp-with-zoom mfp-img-mobile',
+		            image: {
+			            verticalFit: true,
+			            titleSrc: function(item) {
+				            return item.el.attr('title')
+			            }
+		            },
+		            gallery: {
+			            enabled: true
+		            },
+		            zoom: {
+			            enabled: true,
+			            duration: 300, 
+			            opener: function(element) {
+				            return element.find('img');
+			            }
+		            }
+		
+	     })
+               
     });
 
 
@@ -47,7 +69,7 @@
         <h4> Here are some animations showing my application:</h4>
 
         <div data-toggle="popover" data-placement="top" data-content="Hover over me to pause the slides!" data-trigger="hover">
-            
+
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -167,83 +189,132 @@
         <h4>Here are some Screenshots of my application</h4>
 
 
+        <div  class="ui-widget-content" data-toggle="popover" data-placement="top" data-content="CLICK ON ME!!" data-trigger="hover">
+            <div class="zoom-gallery">
 
-
-        <div class="owl-carousel owl-theme owl-loaded owl-drag">
-
-
-
-
-
-            <div class="owl-stage-outer">
-                <div class="owl-stage" style="transform: translate3d(-1806px, 0px, 0px); transition: all 0s ease 0s; width: 7226px;">
-
-
-                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-                        <div class="item">
-                            <div> <img src="~/AMSPic/CourRegist.PNG" alt="Course Registration"></div>
-                        </div>
-                    </div>
-
-                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-                        <div class="item">
-                            <div> <img src="~/AMSPic/DelUsr.PNG" alt="Delete User"></div>
-                        </div>
-                    </div>
-
-                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-                        <div class="item">
-                            <div> <img src="~/AMSPic/AddUser.PNG" alt="Add User"></div>
-                        </div>
-                    </div>
+                <div class="owl-carousel owl-theme owl-loaded owl-drag">
 
 
 
 
-                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-                        <div class="item">
-                            <div>
-                                <img src="~/AMSPic/mainscreen.PNG" alt="main screen">
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(-1806px, 0px, 0px); transition: all 0s ease 0s; width: 7226px;">
+
+
+                            <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                                <div class="item">
+                                    <a href="~/AMSPic/CourRegist.PNG" title="Course Registration">
+                                        <div><img src="~/AMSPic/CourRegist.PNG"> </div> 
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                                <div class="item">
+
+                                    <a href="~/AMSPic/DelUsr.PNG" title="Delete User">
+                                        <div><img src="~/AMSPic/DelUsr.PNG"> </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                                <div class="item">
+
+                                    <a href="~/AMSPic/AddUser.PNG" title="Add User">
+                                        <div><img src="~/AMSPic/AddUser.PNG"> </div>
+                                    </a>
+
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                                <div class="item">
+
+                                    <a href="~/AMSPic/mainscreen.PNG" title="main screen">
+                                        <div><img src="~/AMSPic/mainscreen.PNG"> </div>
+                                    </a>
+
+
+                                </div>
+                            </div>
+
+                            <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+
+                                <div class="item">
+
+                                    <a href="~/AMSPic/Login.PNG" title="Login">
+                                        <div><img src="~/AMSPic/Login.PNG"> </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                                <div class="item">
+
+                                    <a href="~/AMSPic/AddStu_TEA.PNG" title="Add Student/Teacher">
+                                        <div><img src="~/AMSPic/AddStu_TEA.PNG"> </div>
+                                    </a>
+
+
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="owl-item" style="width: 291.067px; margin-right: 10px;">
+                                <div class="item">
+
+                                    <a href="~/AMSPic/Rpt.PNG" title="Predefined Reports">
+                                        <div><img src="~/AMSPic/Rpt.PNG"> </div>
+                                    </a>
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
+                                <div class="item">
+
+                                    <a href="~/AMSPic/UpdateStu_Tea.PNG" title="Updated Student/teacher/courses">
+                                        <div><img src="~/AMSPic/UpdateStu_Tea.PNG"> </div>
+                                    </a>
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
+                                <div class="item">
+
+                                    <a href="~/AMSPic/UsrMen.png" title="Delete User">
+                                        <div><img src="~/AMSPic/UsrMen.png"> </div>
+                                    </a>
+
+
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-
-                        <div class="item">
-                            <div> <img src="~/AMSPic/Login.PNG" alt="Login"> </div>
-                        </div>
-                    </div>
-                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-                        <div class="item">
-                            <div> <img src="~/AMSPic/AddStu_TEA.PNG" alt="Add Student/Teacher"> </div>
-                        </div>
-                    </div>
 
 
-                    
-                    
-                    <div class="owl-item" style="width: 291.067px; margin-right: 10px;">
-                        <div class="item">
-                            <div> <img src="~/AMSPic/Rpt.PNG" alt="Predefined Reports"> </div>
-                        </div>
-                    </div>
-                    
-                    <div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
-                        <div class="item">
-                            <div> <img src="~/AMSPic/UpdateStu_Tea.PNG" alt="Updated Student/teacher/courses"> </div>
-                        </div>
-                    </div>
-
-                    <div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
-                        <div class="item">
-                            <div> <img src="~/AMSPic/UsrMen.png" alt="User Menu"> </div>
-                        </div>
-
-
-                    </div>
                 </div>
             </div>
+
+
 
 
         </div>
@@ -252,6 +323,7 @@
         <h4> If interested, please see my code</h4>
 
         <a href="https://github.com/dim505/AMS"><img src="~/RegularPics/githublogo.png" title="Click Me to See Code" alt="github logo" class="centerimg"></a>
+
 
 
     </div>

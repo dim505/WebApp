@@ -15,13 +15,12 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
-    <link rel="stylesheet" href="~/css/site.css" />
-
+    <link rel="stylesheet" href="~/css/site.css">
     <link rel="stylesheet" href="~/OwlCarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="~/OwlCarousel/docs/assets/owlcarousel/assets/owl.theme.default.css">
 
-
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
 
     <script>
@@ -31,12 +30,15 @@
         // Fallback to loading jQuery from a local path if the CDN is unavailable
         (window.jQuery || document.write('<script src= "~/js/jquery-3.4.1.min.js"><\/script>'))
     </script>
+
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
     <script>
 
         // Fallback to loading jQuery from a local path if the CDN is unavailable
         (window.jQuery || document.write('<script src="~/js/jquery-ui-1.12.1/jquery-ui.min.js"><\/script>'))
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,23 +58,23 @@
 
 
         //on a window resize event, this function is exicuted
-        window.onresize = function() {
+        window.onresize = function () {
 
             //checks to see if window width is 575 or less
             if (window.innerWidth < 575 || screen.width < 575) {
 
-                    //handles differently if IE or Edge
+                //handles differently if IE or Edge
                 if (isIE() || (isEdge > -1)) {
-                        //optimizes drop down for screen size
-                        $('.caret').css('border-top', '5px solid white')
-                        $('.dropbtn').css('padding-left', '0px')
-                        $('.dropbtn').css('padding-right', '0px')
-                        
-                    }else{
-                        $('.caret').css('display', 'contents')
-                        $('.dropbtn').css('padding-left', '0px')
-                        $('.dropbtn').css('padding-right', '0px')
-                    }
+                    //optimizes drop down for screen size
+                    $('.caret').css('border-top', '5px solid white')
+                    $('.dropbtn').css('padding-left', '0px')
+                    $('.dropbtn').css('padding-right', '0px')
+
+                } else {
+                    $('.caret').css('display', 'contents')
+                    $('.dropbtn').css('padding-left', '0px')
+                    $('.dropbtn').css('padding-right', '0px')
+                }
 
                 //checks to see if window width is between 575 and 767
             } else if ((window.innerWidth > 575 && window.innerWidth < 767)) {
@@ -90,7 +92,7 @@
 
 
 
-        } //checks to see if window width is 767 or higher
+            } //checks to see if window width is 767 or higher
             else if (window.innerWidth > 767) {
                 //optimizes drop down for screen size
                 $('.caret').css('display', 'inline')
@@ -107,11 +109,11 @@
 
         // function checks if browser IE
         function isIE() {
-          ua = navigator.userAgent;
-          /* MSIE used to detect old browsers and Trident used to newer ones*/
-          var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
-  
-          return is_ie; 
+            ua = navigator.userAgent;
+            /* MSIE used to detect old browsers and Trident used to newer ones*/
+            var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+
+            return is_ie;
         }
 
 
@@ -122,7 +124,7 @@
         var isFirefox = navigator.userAgent.search("Firefox");
 
         // detects version of Edge
-         var isEdge =  window.navigator.userAgent.indexOf("Edg")
+        var isEdge = window.navigator.userAgent.indexOf("Edg")
 
 
 
@@ -163,7 +165,7 @@
                     $('body').fadeIn(800);
                 });
 
-                //checks if diff is greater than 1 
+                //checks if diff is greater than 1
                 if (diff > 1) {
 
                     //sets last visited time to a smaller number so the diff will be smaller. this wont cause the page to constantly show the preloader with each refresh
@@ -184,11 +186,11 @@
 
                     //displays my alert div if user is using IE
                     if (isIE()) {
-                        
+
                         $('.alert').css('display', 'block').delay(30000).fadeOut(1000)
 
                     }
-                    
+
                 });
 
 
@@ -207,54 +209,54 @@
         $(document).ready(function () {
 
 
-            
-                    //checks screensize on initial screen load
-                    if (screen.width < 575 || window.innerWidth < 575) {
-            
 
-                        //checks if IE
-                        if (isIE()) {
-                         //optimizes drop down
-                        $('.caret').css('border-top', '5px solid white')
-                        $('.dropbtn').css('padding-left', '0px')
-                        $('.dropbtn').css('padding-right', '0px')
-                        
-                    }else{
-                        $('.caret').css('display', 'contents')
-                        $('.dropbtn').css('padding-left', '0px')
-                        $('.dropbtn').css('padding-right', '0px')
-                    }
+            //checks screensize on initial screen load
+            if (screen.width < 575 || window.innerWidth < 575) {
 
-                        
 
-            }
-
-                      //checks screensize on initial screen load
-                    else if ((screen.width  > 575 && screen.width  < 767) || (window.innerWidth > 575 && window.innerWidth < 767)) {
+                //checks if IE
+                if (isIE()) {
                     //optimizes drop down
-                    $('.caret').css('display', 'inline')
-                    $('.dropbtn').css('padding-top', '7px')
-                    $('.dropbtn').css('padding-left', '7px')
-                    $('.dropbtn').css('padding-bottom', '7px')
-                    $('.dropbtn').css('padding-right', '16px')
-                    $('.dropbtn').css('height', '35px')
+                    $('.caret').css('border-top', '5px solid white')
+                    $('.dropbtn').css('padding-left', '0px')
+                    $('.dropbtn').css('padding-right', '0px')
 
-                    $('.caret').css('border-top', '5px solid black')
-            }
-        
-                
-                 //checks screensize on initial screen load
-                    else if (screen.width > 767 || window.innerWidth > 767) {
-                    //optimizes drop down
-                    $('.caret').css('display', 'inline')
-                    $('.dropbtn').css('padding-top', '8px')
-                    $('.dropbtn').css('padding-left', '8px')
-                    $('.dropbtn').css('padding-bottom', '8px')
-                    $('.dropbtn').css('padding-right', '16px')
-                    $('.dropbtn').css('height', '37px')
-                    $('.caret').css('border-top', '5px solid black')
+                } else {
+                    $('.caret').css('display', 'contents')
+                    $('.dropbtn').css('padding-left', '0px')
+                    $('.dropbtn').css('padding-right', '0px')
                 }
-         //checks to see if page is calculator. Do not want effect on server side calculator
+
+
+
+            }
+
+            //checks screensize on initial screen load
+            else if ((screen.width > 575 && screen.width < 767) || (window.innerWidth > 575 && window.innerWidth < 767)) {
+                //optimizes drop down
+                $('.caret').css('display', 'inline')
+                $('.dropbtn').css('padding-top', '7px')
+                $('.dropbtn').css('padding-left', '7px')
+                $('.dropbtn').css('padding-bottom', '7px')
+                $('.dropbtn').css('padding-right', '16px')
+                $('.dropbtn').css('height', '35px')
+
+                $('.caret').css('border-top', '5px solid black')
+            }
+
+
+            //checks screensize on initial screen load
+            else if (screen.width > 767 || window.innerWidth > 767) {
+                //optimizes drop down
+                $('.caret').css('display', 'inline')
+                $('.dropbtn').css('padding-top', '8px')
+                $('.dropbtn').css('padding-left', '8px')
+                $('.dropbtn').css('padding-bottom', '8px')
+                $('.dropbtn').css('padding-right', '16px')
+                $('.dropbtn').css('height', '37px')
+                $('.caret').css('border-top', '5px solid black')
+            }
+            //checks to see if page is calculator. Do not want effect on server side calculator
             if (page !== "Calculator") {
 
                 //Fades body in for all other pages
@@ -265,7 +267,11 @@
                 $('body').css('display', 'block')
 
             }
-        });
+
+
+
+}
+        );
 
 
 
