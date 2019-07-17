@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="~/OwlCarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="~/OwlCarousel/docs/assets/owlcarousel/assets/owl.theme.default.css">
 
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
 
@@ -47,9 +47,9 @@
 
 
 
+    <script src="https://unpkg.com/progressively/dist/progressively.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressively/dist/progressively.min.css">
 
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin=""></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin=""></script>
 
 
 
@@ -172,10 +172,7 @@
                     sessionStorage.setItem("LastLoad", CurrDate + 1000000)
 
 
-
                 }
-
-
             } else {
 
                 $(document).ready(function () {
@@ -268,14 +265,61 @@
 
             }
 
+            
+            $("img").addClass("progressive__img progressive--not-loaded");
+
+            $("img").each(function () {
 
 
-}
+                $(this).attr('data-progressive', $(this).attr('src'))
+
+            })
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+            //
         );
 
+        //
+
+        $(window).on('load', function () {
+            setTimeout(function () {
+                progressively.init()
+                
+            }, 1000);
 
 
+        });
 
+
+        
+        $(document).ready(function () {
+
+
+            $('#carouselExampleIndicators').bind('slide.bs.carousel', function (e) {
+                console.log('slide event!');
+                 setTimeout(function () {
+                progressively.init()
+                
+            }, 1000);
+});
+          
+        });
+       
+        
         //Jquery pop over function targeting divs that have data toggle pop over set
         $(function () {
             $('[data-toggle="popover"]').popover()
