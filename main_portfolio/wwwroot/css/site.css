@@ -357,3 +357,33 @@ body {
 
 
 
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+
+.wrapper img{ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:100% !important;
+  opacity: 1;
+  transition: all .4s ease-in-out;
+
+}
+
+.wrapper img:hover{ 
+
+  opacity: 0.5;
+ 
+
+}
+
+.wrapper div{ 
+	width:100%
+
+}
+
+
+

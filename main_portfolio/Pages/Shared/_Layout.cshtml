@@ -295,27 +295,41 @@
 
         //
 
-        $(window).on('load', function () {
+
+        if (diff > 1 || diff === 0) {
+            $(window).on('load', function () {
+
+
+                setTimeout(function () {
+                    progressively.init()
+
+                }, 5500);
+
+
+            });
+        } else {
+
             setTimeout(function () {
-                progressively.init()
-                
-            }, 1000);
+                    progressively.init()
+
+                }, 250);
 
 
-        });
 
+
+        }
 
         
         $(document).ready(function () {
 
 
             $('#carouselExampleIndicators').bind('slide.bs.carousel', function (e) {
-                console.log('slide event!');
+               
                  setTimeout(function () {
                 progressively.init()
                 
-            }, 1000);
-});
+            }, 1200);
+            });
           
         });
        
