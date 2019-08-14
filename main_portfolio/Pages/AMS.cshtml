@@ -9,12 +9,19 @@
 
     $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
+            //keeps carousel automaticly playing upon load
             autoplay: true,
-            items:2,
+            //The number of items you want to see on the screen.
+            items: 2,
+            //centers picture works well with odd number of pictures
             center: true,
+            //restartes carousel once it gets to last picture
             loop: true,
+            //determines margin-right on picture 
             margin: 10,
+            // this Shows next/prev buttons
             nav: true,
+            //hows the number of active pictures based on screen res. makes it responsive
             responsive: {
                 200: {
                     items: 1
@@ -26,25 +33,39 @@
             }
         });
 
-
+    //code to initialize the zoom in for the ams gallery
      $('.zoom-gallery').magnificPopup({
-		            delegate: 'a',
-		            type: 'image',
-		            closeOnContentClick: false,
+                    // the selector for gallery item
+                    delegate: 'a',
+                    //specifies pop up type 
+                    type: 'image',
+
+		            //puts close BTN in couner of page instead of near the picture
 		            closeBtnInside: false,
+                    //classes used for  CSS animation 
 		            mainClass: 'mfp-with-zoom mfp-img-mobile',
-		            image: {
-			            verticalFit: true,
-			            titleSrc: function(item) {
+
+                 image: {
+                        //Fits image in area vertically
+                     verticalFit: true,
+                     //gets title and displays it at botton of pic
+                     titleSrc: function (item) {
+                            //gets img title
 				            return item.el.attr('title')
 			            }
-		            },
-		            gallery: {
+                  },  
+                 //gallery allows you yo switch the content of the popup and adds navigation arrows.
+                  gallery: {
+                        //enables gallery option
 			            enabled: true
-		            },
-		            zoom: {
+         },
+                    //enables the zoom effect when pictures are clicked
+         zoom: {
+                        //enables zoom option
 			            enabled: true,
-			            duration: 300, 
+                        //// duration of the effect, in milliseconds
+             duration: 300, 
+                        //looks for the img element to zoom into
 			            opener: function(element) {
 				            return element.find('img');
 			            }

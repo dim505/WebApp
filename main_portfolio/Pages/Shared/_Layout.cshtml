@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - My Portfolio</title>
+    <title>@ViewData["Title"]</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -265,9 +265,10 @@
 
             }
 
-            
+            //tags all images with lazy load classses            
             $("img").addClass("progressive__img progressive--not-loaded");
 
+            //sets all imgs with data-progressive class with value fron the img src
             $("img").each(function () {
 
 
@@ -295,11 +296,11 @@
 
         //
 
-
+        //checks to see if the preloader is loading 
         if (diff > 1 || diff === 0) {
             $(window).on('load', function () {
 
-
+                //sets lazy load to go off after the preloader loads
                 setTimeout(function () {
                     progressively.init()
 
@@ -308,7 +309,7 @@
 
             });
         } else {
-
+            //sets the lazy load to happen immediately
             setTimeout(function () {
                     progressively.init()
 
@@ -322,9 +323,10 @@
         
         $(document).ready(function () {
 
-
+            //slide event that fires with every slide change
             $('#carouselExampleIndicators').bind('slide.bs.carousel', function (e) {
-               
+
+                //initizes lazy load for the new picture in the slide
                  setTimeout(function () {
                 progressively.init()
                 
@@ -390,6 +392,7 @@
 
                                     <ul class="dropdown-content">
                                         <li><a asp-area="" asp-page="/ReactJsWeatherApp">Weather App</a></li>
+                                        <li><a asp-area="" asp-page="/ReactTicTacToe">Tic Tac Toe</a></li>
                                         <li><a asp-area="" asp-page="/ReactWebStore">Webstore</a></li>
                                     </ul>
                                 </div>
