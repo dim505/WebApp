@@ -263,6 +263,15 @@ width:100%;
 }
 
 
+.AMS .carousel-caption p {
+	background-color: red;
+	display: inline-block;
+	border: 0.5px solid;
+	padding-right: 5px;
+	padding-left:5px;
+}
+
+
 .AMS .carousel-indicators li {
 	background-color: black;
 
@@ -368,45 +377,75 @@ body {
   margin-left: auto;
   margin-right: auto;
   width:100% !important;
-  opacity: 1;
-  transition: all .4s ease-in-out;
 
-}
-
-.wrapper img:hover{ 
-
-  opacity: 0.5;
- 
-
-}
-
-.wrapper div{ 
-	width:100%
 
 }
 
 
 
-.example-enter {
-  opacity: 0.01;
-  width: 0px;
+.overlay {
+	  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    opacity: 0;
+  transition: .5s ease;
+  background-color:white;	
+  
+	
 }
 
-.example-enter.example-enter-active {
-  opacity: 1;
-  width: 100px;
-  transition: 700ms;
+.imgText {
+	
+	
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  font-family: "Times New Roman", Times, serif;
+	
+}
+.ImgOverLaycontainer{ 
+	width:100%;
+	position: relative;
+
 }
 
-.example-leave {
-  opacity: 1;
-  width: 100px;
+.ImgOverLaycontainer:hover .overlay {
+  opacity: 0.9;
+  border-style: solid;
+  border-color: red;
 }
 
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  width: 0px;
-  transition: 700ms;
+
+.imgText {font-size: 1rem;}
+
+@media (min-width: 576px) {
+	.imgText {font-size: 1.25rem;}
+	
 }
+
+@media (min-width: 768px) {
+	.imgText {font-size: 1.5rem;}
+	
+}
+
+
+@media (min-width: 992px) {
+	.imgText {font-size: 1.75rem;}
+	
+}
+
+
+@media (min-width: 1200px) {
+	.imgText {font-size: 2rem;}
+	
+}
+
 
 

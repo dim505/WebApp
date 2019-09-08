@@ -54,7 +54,7 @@
 
 
     <script>
-        debugger
+       
 
 
         //on a window resize event, this function is exicuted
@@ -268,14 +268,44 @@
             //tags all images with lazy load classses            
             $("img").addClass("progressive__img progressive--not-loaded");
 
+            debugger
+
+            /*
             //sets all imgs with data-progressive class with value fron the img src
             $("img").each(function () {
 
 
-                $(this).attr('data-progressive', $(this).attr('src'))
+                $(this).attr('data-progressive', $(this).attr('src') )
 
             })
 
+*/
+                       
+	    var string 
+	    
+            //sets all imgs with data-progressive class with value fron the img src
+            $("img").each(function () {
+
+                $(this).attr('data-progressive', $(this).attr('src') )
+
+                string = $(this).attr('src').substring(0, $(this).attr('src').length - 4) + "Min" + ($(this).attr('src').substring($(this).attr('src').length - 4, $(this).attr('src').length)) 
+	            
+                if (($(this).attr('src').substring($(this).attr('src').length - 4, $(this).attr('src').length)) === ".gif") {
+                    console.log("inside if")
+
+                    $(this).attr('src', "/AMSPic/GifMin.png")
+
+                } else {
+                        
+                        $(this).attr('src', string )
+                    
+
+                }
+		
+		
+                
+
+            })
 
 
 
