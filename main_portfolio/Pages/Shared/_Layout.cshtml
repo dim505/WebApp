@@ -270,16 +270,7 @@
 
             debugger
 
-            /*
-            //sets all imgs with data-progressive class with value fron the img src
-            $("img").each(function () {
 
-
-                $(this).attr('data-progressive', $(this).attr('src') )
-
-            })
-
-*/
                        
 	    var string 
 	    
@@ -291,13 +282,18 @@
                 string = $(this).attr('src').substring(0, $(this).attr('src').length - 4) + "Min" + ($(this).attr('src').substring($(this).attr('src').length - 4, $(this).attr('src').length)) 
 	            
                 if (($(this).attr('src').substring($(this).attr('src').length - 4, $(this).attr('src').length)) === ".gif") {
-                    console.log("inside if")
+                    
 
                     $(this).attr('src', "/AMSPic/GifMin.png")
 
                 } else {
-                        
+                    if ($(this).attr("id") === "video") {
+                        return
+
+                    } else {
                         $(this).attr('src', string )
+                    }
+                        
                     
 
                 }

@@ -300,8 +300,8 @@ width:100%;
 
 /*styling for mini picture carousel on AMS page */ 
 .AMS .owl-stage-outer img{
-	height: 380px;
-	width: 350px;
+	height: 280px;
+	
 	
 	
 }
@@ -447,5 +447,40 @@ body {
 	
 }
 
+img {
+	width:100%;
+	
+}
 
 
+.modal-dialog {
+      max-width: 90%;
+	  max-height:60%;
+
+  }
+
+
+  
+  
+  
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+
+
+#carouselExampleIndicators > div:hover {
+	cursor: pointer;
+	
+	
+}
