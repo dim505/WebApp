@@ -381,7 +381,7 @@ body {
 
 }
 
-
+/*styling for div overlay on Github and Live pictures*/
 
 .overlay {
 	  position: absolute;
@@ -422,7 +422,7 @@ body {
   border-color: red;
 }
 
-
+/*styling for text overlay on hover for code/live pictures */
 .imgText {font-size: 1rem;}
 
 @media (min-width: 576px) {
@@ -452,17 +452,12 @@ img {
 	
 }
 
-
+/*styling for modal */
 .modal-dialog {
       max-width: 90%;
 	  max-height:60%;
 
   }
-
-
-  
-  
-  
 .modal-body {
   position:relative;
   padding:0px;
@@ -478,9 +473,30 @@ img {
   opacity:1;
 }
 
+/*styling for carasel when hovering over with mouse. Lets user know they can click for a pop up */
 
 #carouselExampleIndicators > div:hover {
 	cursor: pointer;
 	
 	
 }
+
+/* styleing for my youtube iframe */
+#youtube {
+	margin-top: 10px;
+	
+	
+}
+
+
+/*css for my glyphicon discontinued for bootstrap 4 */
+@font-face{font-family:'Glyphicons Halflings';src:url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot');src:url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff') format('woff'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf') format('truetype'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');}.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;}
+.glyphicon-question-sign:before{content:"\e085";}
+
+
+#QuestionMark {
+	display: inline;border: 1px
+	
+}
+
+
