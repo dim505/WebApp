@@ -1,0 +1,349 @@
+﻿@page
+@model MyApp.Namespace.ReactWebStoreModel
+@{
+}
+
+@{
+    ViewData["Title"] = "DMS";
+
+}
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            var $videoSrc;
+            $('.video-btn').click(function () {
+                $videoSrc = $(this).data("src");
+            });
+            console.log($videoSrc);
+
+
+
+
+            $('#myModal').on('shown.bs.modal', function (e) {
+                $('[data-toggle="popover"]').popover('dispose')
+
+
+                $("#video").attr('src', $videoSrc);
+                $("#video").removeClass("progressive__img progressive--not-loaded").addClass("progressive__img progressive--is-loaded");
+
+            })
+
+
+
+
+
+
+            $('#myModal').on('hide.bs.modal', function (e) {
+
+                $("#video").attr('src', $videoSrc);
+                $('[data-toggle="popover"]').popover()
+
+
+
+            })
+
+
+
+
+
+
+
+
+            $(".owl-carousel").owlCarousel({
+                //keeps carousel automaticly playing upon load
+                autoplay: true,
+                //The number of items you want to see on the screen.
+                items: 4,
+                //centers picture works well with odd number of pictures
+                center: true,
+                //restartes carousel once it gets to last picture
+                loop: true,
+                //determines margin-right on picture
+                margin: 10,
+                // this Shows next/prev buttons
+                nav: true,
+                //hows the number of active pictures based on screen res. makes it responsive
+                responsive: {
+                    200: {
+                        items: 1
+                    },
+                    800: {
+                        items: 2
+                    },
+
+                    1000: {
+                        items: 3
+                    }
+
+                }
+            });
+
+            //code to initialize the zoom in for the ams gallery
+            $('.zoom-gallery').magnificPopup({
+                // the selector for gallery item
+                delegate: 'a',
+                //specifies pop up type
+                type: 'image',
+
+                //puts close BTN in couner of page instead of near the picture
+                closeBtnInside: false,
+                //classes used for  CSS animation
+                mainClass: 'mfp-with-zoom mfp-img-mobile',
+
+                image: {
+                    //Fits image in area vertically
+                    verticalFit: true,
+                    //gets title and displays it at botton of pic
+                    titleSrc: function (item) {
+                        //gets img title
+                        return item.el.attr('title')
+                    }
+                },
+                //gallery allows you yo switch the content of the popup and adds navigation arrows.
+                gallery: {
+                    //enables gallery option
+                    enabled: true
+                },
+                //enables the zoom effect when pictures are clicked
+                zoom: {
+                    //enables zoom option
+                    enabled: true,
+                    //// duration of the effect, in milliseconds
+                    duration: 300,
+                    //looks for the img element to zoom into
+                    opener: function (element) {
+                        return element.find('img');
+                    }
+                }
+
+            })
+
+        });
+
+
+
+    </script>
+
+
+<div class="AMS">
+
+
+
+
+
+    <h1> Document Management System (DMS) </h1>
+
+
+
+
+
+    <p>
+        My Document Management System is coded in Java. It has a client/server architecture. The server acts as a gate keeper for files to be checked in/out of the server directory. The server keep tracks of who checks out the files,
+        who checks them in and who is the owner. Clients can connect to the server and check files in and out as needed.
+    </p>
+
+    <p>
+        The server is always listening in the background for a connection. There can be up to 10 connections at once.
+        Once a client connects via IP address, they have 4 options that they can enter in the terminal:
+
+
+    </p>
+
+    <p>
+
+        <ol>
+            <li>Checkout "file name": You download a files from the server </li>
+            <li>Check in "file name" : You upload a file to the server</li>
+            <li>Refresh : gets a list of files and their checkout status/owners</li>
+            <li>Get latest version : downloads all files related to owner</li>
+
+        </ol>
+
+    </p>
+    <h4>Here are some Screenshots of my application</h4>
+
+
+    <div class="ui-widget-content" data-toggle="popover" data-placement="top" data-content="CLICK ON ME!!" data-trigger="hover">
+        <div class="zoom-gallery">
+
+            <div class="owl-carousel owl-theme owl-loaded owl-drag">
+
+
+
+
+
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(-1806px, 0px, 0px); transition: all 0s ease 0s; width: 7226px;">
+
+                        <div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+
+                                <a href="~/JavaDmsPic/AskForIp.PNG" title="Asking For IP Address">
+                                    <div><img src="~/JavaDmsPic/AskForIp.PNG"> </div>
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="owl-item active" style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+
+                                <a href="~/JavaDmsPic/MM.PNG" title="Main Menu">
+                                    <div><img src="~/JavaDmsPic/MM.PNG"> </div>
+                                </a>
+
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="owl-item" style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+
+                                <a href="~/JavaDmsPic/CO1.PNG" title="Checking Out File">
+                                    <div><img src="~/JavaDmsPic/CO1.PNG"> </div>
+                                </a>
+
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+
+                                <a href="~/JavaDmsPic/CO2.PNG" title="File has been downloaded/Checkout from server">
+                                    <div><img src="~/JavaDmsPic/CO2.PNG"> </div>
+                                </a>
+
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+
+                            <div class="item">
+
+                                <a href="~/JavaDmsPic/CI.PNG" title="Checking in/uploading file to server">
+                                    <div><img src="~/JavaDmsPic/CI.PNG"> </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+
+                                <a href="~/JavaDmsPic/R1.PNG" title="Refresh Command">
+                                    <div><img src="~/JavaDmsPic/R1.PNG"> </div>
+                                </a>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+
+                                <a href="~/JavaDmsPic/R2.PNG" title="Gettting a list of files list on the server and if they are able to be checked out">
+                                    <div><img src="~/JavaDmsPic/R2.PNG"> </div>
+                                </a>
+
+
+                            </div>
+                        </div>
+
+                        <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+
+                                <a href="~/JavaDmsPic/GlV1.PNG" title="Downloading all available files">
+                                    <div><img src="~/JavaDmsPic/GlV1.PNG"> </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+                                <a href="~/JavaDmsPic/GlV2.PNG" title="All available files downloaded to client">
+                                    <div><img src="~/JavaDmsPic/GlV2.PNG"> </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                            <div class="item">
+                                <a href="~/JavaDmsPic/exit.PNG" title="Exiting the Program">
+                                    <div><img src="~/JavaDmsPic/exit.PNG"> </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <h4>Please click on the GITHUB picture below to see my code !!!</h4>
+
+
+
+
+
+
+    <div class="wrapper">
+
+
+        <div class="ImgOverLaycontainer">
+            <a href="https://github.com/dim505/Scripts/tree/master/DMS" target="_blank">
+                <img src="~/RegularPics/githublogo.png" title="Click Me to See Code" alt="github logo" class="centerimg">
+                <div class="overlay">
+                    <h1 class="imgText"> Please Click Here to See My Code </h1>
+                </div>
+            </a>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>

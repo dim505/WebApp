@@ -39,17 +39,57 @@
     });
 
 
+    window.EqBtnPressed = 0 
+
     //each button pressed has its own function witch adds its value to the display string
-    function btn1() { document.getElementById("display").value += "1" };
-    function btn2() { document.getElementById("display").value += "2" };
-    function btn3() { document.getElementById("display").value += "3" };
-    function btn4() { document.getElementById("display").value += "4" };
-    function btn5() { document.getElementById("display").value += "5" };
-    function btn6() { document.getElementById("display").value += "6" };
-    function btn7() { document.getElementById("display").value += "7" };
-    function btn8() { document.getElementById("display").value += "8" };
-    function btn9() { document.getElementById("display").value += "9" };
-    function btn0() { document.getElementById("display").value += "0" };
+    function btn1() { 
+	CheckNumAfterEQ(1)
+	}
+    function btn2() {
+	CheckNumAfterEQ(2)
+	};
+    function btn3() { 
+	CheckNumAfterEQ(3)
+	 };
+    function btn4() {
+	CheckNumAfterEQ(4)
+	};
+    function btn5() { 
+	CheckNumAfterEQ(5)
+	};
+    function btn6() { 
+	CheckNumAfterEQ(6)
+	};
+    function btn7() { 
+	CheckNumAfterEQ(7)
+	};
+    function btn8() {
+    CheckNumAfterEQ(8)
+	};
+    function btn9() { 
+	CheckNumAfterEQ(9)
+	};
+    function btn0() {
+    CheckNumAfterEQ(0)
+	};
+
+	function CheckNumAfterEQ (BtnPressed) {
+		
+ 
+			if ((BtnPressed == "1" || BtnPressed == "2" || BtnPressed == "3" 
+			|| BtnPressed == "4" || BtnPressed == "5" || BtnPressed == "6" || BtnPressed == "7" 
+			|| BtnPressed == "8" || BtnPressed == "9" || BtnPressed == "0") && window.EqBtnPressed == 1) 	{		
+				document.getElementById("display").value = ""
+				window.EqBtnPressed = 0
+				document.getElementById("display").value += BtnPressed 
+			} else {
+			    document.getElementById("display").value += BtnPressed 
+			 
+			 }
+	
+	
+	
+	}
 
     function btnMulti() {
         //gets value of current display
@@ -68,7 +108,10 @@
             //sets the displays value
             document.getElementById("display").value = display
             //if just a nummber, the * sign gets appended
-        } else { document.getElementById("display").value += "*" }
+        } else {
+            document.getElementById("display").value += "*"
+            window.EqBtnPressed = 0 
+        }
     };
     function btnSub() {
         //gets value of current display
@@ -87,7 +130,10 @@
             //sets the displays value
             document.getElementById("display").value = display
             //if just a nummber, the * sign gets appended
-        } else { document.getElementById("display").value += "-" }
+        } else {
+            document.getElementById("display").value += "-"
+            window.EqBtnPressed = 0 
+        }
     };
     function btnAdd() {
         //gets value of current display
@@ -106,7 +152,10 @@
             //sets the displays value
             document.getElementById("display").value = display
             //if just a nummber, the + sign gets appended
-        } else { document.getElementById("display").value += "+" }
+        } else {
+            document.getElementById("display").value += "+"
+            window.EqBtnPressed = 0 
+        }
     };
 
     function btnDiv() {
@@ -126,7 +175,10 @@
             display = display.slice(0, -1) + "/"
             //sets the displays value
             document.getElementById("display").value = display
-        } else { document.getElementById("display").value += "/" }
+        } else {
+            document.getElementById("display").value += "/"
+            window.EqBtnPressed = 0 
+        }
     };
 
     function btnEq() {
@@ -134,13 +186,14 @@
         var results = eval(document.getElementById("display").value)
         //returns the results
         document.getElementById("display").value = results
-
+        window.EqBtnPressed = 1
 
     };
 
     function btnC() {
         //clears the display
         document.getElementById("display").value = ""
+        window.EqBtnPressed = 0 
     };
 
 
@@ -159,7 +212,7 @@
 
 
 <div>
-    <h3 class="blockquote-footer"> This is written in Javascript, HTML, and CSS with elements of JQuery and Popper JS.  This is a client-side calculator that is draggable (Please note, the draggable option does not work on mobile devices). It also remembers the drag location even after a page refresh. All calculations are done on the client's browser.  <a href="https://github.com/dim505/WebApp/blob/master/main_portfolio/Pages/JavaScriptCalc.cshtml"> Please click here for the source code!</a> </h3>
+    <h3 class="blockquote-footer"> This is written in Javascript, HTML, and CSS with elements of JQuery and Popper JS.  This is a client-side calculator that is draggable (Please note, the draggable option does not work on mobile devices). It also remembers the drag location even after a page refresh. All calculations are done on the client's browser. Please note that dragging does not work on mobile. <a href="https://github.com/dim505/WebApp/blob/master/main_portfolio/Pages/JavaScriptCalc.cshtml" target="_blank"> Please click here for the source code!</a> </h3>
 </div>
 
 

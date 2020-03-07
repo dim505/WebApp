@@ -11,11 +11,9 @@ namespace MyApp.Namespace
     public class CalculatorModel : PageModel
     {
 
-        
-          
         [TempData]
         //variable used to display the text of calculator
-        public string ResultInfo { get; set; }
+        public string ResultInfo { get; set; } = "";
 
 
 
@@ -23,18 +21,18 @@ namespace MyApp.Namespace
         //FUTURE CODE OPTIMIZATION: SEE IF RESULTINFO CAN BE REMOVED AND GLODISPLAYSTR CAN BE DISPLAYED DIRECTLY
         //                          SEE IF YOU CAN GET RID OF FLAG AND CHECK FOR NULL DIRECTLY FOR SIGN
         //                          clean up any unused variables
-     
 
-        
+
+
 
         public void OnGet()
-        {	
+        {
         }
-        
+
         public async Task<IActionResult> OnPostCalculateAsync(String BtnVal)
         {
 
-            
+
 
             //checks if pressed button is C
             if (string.Equals(BtnVal, "C"))
@@ -48,7 +46,7 @@ namespace MyApp.Namespace
                 GloVar.VarCurrSign = "";
                 GloVar.VarDisplayStr = "0";
                 GloVar.FirSignFlag = 0;
-                
+
             }
             //checks if pressed button is divide
 
@@ -59,7 +57,8 @@ namespace MyApp.Namespace
                 GloVar.VarCurrSign = "/";
 
                 //checks if any other sign buttons have been pressed
-                if (GloVar.FirSignFlag == 0) {
+                if (GloVar.FirSignFlag == 0)
+                {
 
 
                     //appends sign to display string
@@ -69,7 +68,9 @@ namespace MyApp.Namespace
                     GloVar.FirSignFlag = 1;
 
 
-                } else {
+                }
+                else
+                {
 
                     //replaces an other signs that may have been pressed with /
                     GloVar.VarDisplayStr = GloVar.VarDisplayStr.Replace("–", "/").Replace("+", "/").Replace("*", "/");
@@ -83,7 +84,8 @@ namespace MyApp.Namespace
             }
 
             //checks if pressed button is subtract
-            else if (string.Equals(BtnVal, "–")) {
+            else if (string.Equals(BtnVal, "–"))
+            {
                 //sets the sign variable
                 GloVar.VarCurrSign = "–";
 
@@ -108,7 +110,8 @@ namespace MyApp.Namespace
             }
 
             //checks if pressed button is multiply
-            else if (string.Equals(BtnVal, "*")) {
+            else if (string.Equals(BtnVal, "*"))
+            {
                 //sets the sign variable
                 GloVar.VarCurrSign = "*";
                 //checks if any other sign buttons have been pressed
@@ -132,7 +135,8 @@ namespace MyApp.Namespace
             }
 
             //checks if pressed button is equals
-            else if (string.Equals(BtnVal, "=")) {
+            else if (string.Equals(BtnVal, "="))
+            {
 
                 //checks if any numbers need to be calculated
                 if (string.IsNullOrWhiteSpace(GloVar.VarCurrNum) | string.IsNullOrWhiteSpace(GloVar.VarCurrNum2))
@@ -141,50 +145,58 @@ namespace MyApp.Namespace
                     ResultInfo = GloVar.VarDisplayStr.Replace("–", "").Replace("/", "").Replace("+", "").Replace("*", "");
                     //returns page with specified values
                     return RedirectToPage();
-                    
+
 
                 }
-                else {
+                else
+                {
 
 
 
 
-                //declares variables for calculation and converts tracked numbers to doubles
-                Double VarCurrNum = Convert.ToDouble(GloVar.VarCurrNum);
-                Double VarCurrNum2 = Convert.ToDouble(GloVar.VarCurrNum2);
-                Double results = 0;
+                    //declares variables for calculation and converts tracked numbers to doubles
+                    Double VarCurrNum = Convert.ToDouble(GloVar.VarCurrNum);
+                    Double VarCurrNum2 = Convert.ToDouble(GloVar.VarCurrNum2);
+                    Double results = 0;
 
                     //checks to see what the pressed arithmetic sign is and calculates the number accordingly
-                    if (string.Equals(GloVar.VarCurrSign, "+")) {
-                   results = VarCurrNum + VarCurrNum2; }
-                
+                    if (string.Equals(GloVar.VarCurrSign, "+"))
+                    {
+                        results = VarCurrNum + VarCurrNum2;
+                    }
 
-                else if (string.Equals(GloVar.VarCurrSign, "–")) {
-                    results = VarCurrNum - VarCurrNum2;
 
-                }
+                    else if (string.Equals(GloVar.VarCurrSign, "–"))
+                    {
+                        results = VarCurrNum - VarCurrNum2;
 
-                else if (string.Equals(GloVar.VarCurrSign, "*")) {
-                    results = VarCurrNum * VarCurrNum2;
+                    }
 
-                }
+                    else if (string.Equals(GloVar.VarCurrSign, "*"))
+                    {
+                        results = VarCurrNum * VarCurrNum2;
 
-                else if (string.Equals(GloVar.VarCurrSign, "/")) {
-                    results = VarCurrNum / VarCurrNum2;
+                    }
 
-                }
+                    else if (string.Equals(GloVar.VarCurrSign, "/"))
+                    {
+                        results = VarCurrNum / VarCurrNum2;
 
-                //converts back to string
-                GloVar.VarTotNum = results.ToString();
-                GloVar.VarCurrNum = results.ToString();
-                //reset all global variables
-                GloVar.VarCurrNum2 = "";
-                GloVar.VarCurrSign = "";
-                GloVar.FirSignFlag = 0;
-                //updates display string
-                GloVar.VarDisplayStr = GloVar.VarTotNum;
-                //sets the page variable for display
-                ResultInfo = GloVar.VarDisplayStr;
+                    }
+
+                    //converts back to string
+                    GloVar.VarTotNum = results.ToString();
+                    GloVar.VarCurrNum = results.ToString();
+                    //reset all global variables
+                    GloVar.VarCurrNum2 = "";
+                    GloVar.VarCurrSign = "";
+                    GloVar.FirSignFlag = 0;
+                    //updates display string
+                    GloVar.VarDisplayStr = GloVar.VarTotNum;
+                    //sets the page variable for display
+                    ResultInfo = GloVar.VarDisplayStr;
+                    GloVar.WasEQBtnPressed = true;
+
 
                 }
 
@@ -218,7 +230,8 @@ namespace MyApp.Namespace
             }
 
             //checks if any sign was pressed, if yes. It adds numbers to second number variable
-            else if (!string.IsNullOrWhiteSpace(GloVar.VarCurrSign)) {
+            else if (!string.IsNullOrWhiteSpace(GloVar.VarCurrSign))
+            {
                 //adds value to 2nd current number variable
                 GloVar.VarCurrNum2 += BtnVal;
                 //also updates global display string
@@ -229,13 +242,36 @@ namespace MyApp.Namespace
             }
             else
             {
+                if (GloVar.WasEQBtnPressed)
+                {
+                    //else it adds it to the first current number variable
+                    GloVar.VarCurrNum = "";
+                    GloVar.VarDisplayStr = "";
+                    ResultInfo = "";
+                    GloVar.VarCurrNum += BtnVal;
+                    //sets the current number to the global display string
+                    GloVar.VarDisplayStr = GloVar.VarCurrNum;
+                    //sets the display string for the page
+                    ResultInfo = GloVar.VarDisplayStr;
 
-                //else it adds it to the first current number variable
-                GloVar.VarCurrNum += BtnVal;
-                //sets the current number to the global display string
-                GloVar.VarDisplayStr = GloVar.VarCurrNum;
-                //sets the display string for the page
-                ResultInfo = GloVar.VarDisplayStr;
+                    GloVar.WasEQBtnPressed = false;
+
+
+
+                }
+                else
+                {
+                    //else it adds it to the first current number variable
+                    GloVar.VarCurrNum += BtnVal;
+                    //sets the current number to the global display string
+                    GloVar.VarDisplayStr = GloVar.VarCurrNum;
+                    //sets the display string for the page
+                    ResultInfo = GloVar.VarDisplayStr;
+
+
+
+                }
+
 
             }
 
@@ -252,6 +288,5 @@ namespace MyApp.Namespace
 
 
         }
-
     }
 }

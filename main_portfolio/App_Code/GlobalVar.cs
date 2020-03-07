@@ -7,37 +7,39 @@ using System.Web;
 
 namespace MyApp.Namespace
 {
-    
-  
+
+
 
     public static class GloVar
 
     {
 
-    //declares public fields
-     public static string _VarCurrNum = "0";
-     public static string _VarCurrNum2;
-     public static string _VarCurrSign; 
-     public static string _VarTotNum;
-     public static string _VarDisplayStr = "0";
-     public static int _FirSignFlag = 0;
+        //declares public fields
+        public static string _VarCurrNum = "0";
+        public static string _VarCurrNum2;
+        public static string _VarCurrSign;
+        public static string _VarTotNum;
+        public static string _VarDisplayStr = "0";
+        public static int _FirSignFlag = 0;
+        public static Boolean _WasEQBtnPressed = false;
 
-       //this is used to keep track of the total 
+
+        //this is used to keep track of the total 
         public static string VarTotNum
-    {
-        get
         {
-            return _VarTotNum;
+            get
+            {
+                return _VarTotNum;
+            }
+            set
+            {
+                _VarTotNum = value;
+            }
         }
-        set
-        {
-            _VarTotNum = value;
-        }
-    }
 
-       
 
-    //this is used to keep track of the number pressed before the first arithmetic sign 
+
+        //this is used to keep track of the number pressed before the first arithmetic sign 
         public static string VarCurrNum
         {
             get
@@ -79,16 +81,19 @@ namespace MyApp.Namespace
 
         }
         //keeps track of the display string. Number + arithmetic sign
-        public static string VarDisplayStr {
+        public static string VarDisplayStr
+        {
 
-            get {
+            get
+            {
 
                 return _VarDisplayStr;
             }
 
-            set {
+            set
+            {
 
-                _VarDisplayStr = value; 
+                _VarDisplayStr = value;
 
             }
 
@@ -117,6 +122,29 @@ namespace MyApp.Namespace
 
         }
 
+        public static Boolean WasEQBtnPressed
+        {
+
+            get
+            {
+                return _WasEQBtnPressed;
+            }
+
+            set
+            {
+                _WasEQBtnPressed = value;
+
+            }
+
+
+
+
+
+
+
+
+
+        }
 
 
     }
