@@ -299,8 +299,8 @@ width:100%;
 	
 }
 
-/*styling for mini picture carousel on AMS page */ 
-.AMS .owl-stage-outer img{
+/*styling for mini picture carousel */ 
+.owl-stage-outer img{
 	height: 280px;
 	
 	
@@ -525,4 +525,10 @@ img {
 { transform: scale(1.1)!important; } 
 
 
+}
+
+
+
+.mfp-img {
+    width: 70% !important;
 }
