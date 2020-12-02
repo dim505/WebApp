@@ -130,24 +130,99 @@
 
 <div class="text-right">
 
-    <h2 class="display-4 mb-0">Please see the start of my apartment management system. (Please note it is still being developed at the moment)</h2>
+    <h2 class="display-4 mb-0">Please see the start of my apartment management system. </h2>
+    <p class="blockquote-footer text-right">
+        My applications are now live!! <a href="https://amsfrontend.azurewebsites.net" target="_blank"> Click here for my Land lord front end  </a> OR
+        <a href="https://amstenantfrontend.azurewebsites.net" target="_blank"> Click here for my Tenant front end  </a>
+    </p>
 
 </div>
 
 
 
 
-<div class="text-right">
-    <h3 class="blockquote-footer">
-        The application is now <a href="https://amsfrontend.azurewebsites.net" target="_blank">
-            live!!
-        </a>  My project has a React JS front end, an ASP.Net API backend,
-        and it connects to a SQL database. You can upload/edit/delete tenants, properties, receipts
-        and pictures. It is integrated with Auth0 for authenication. It autosuggests addresses when filling out the property form using the HERE api. It also has automated task schduling using 
-        Hangfire. Once a day it checks if there are any leases that are about to expire and it will send a text message via Twillo. It will have a dashboard for analytics. It has aspects of Bootstrap
+<div class="text-center">
+
+    <p>
+        My projects have a React JS front end, an ASP.Net API backend,
+        and a SQL database. There are 2 front ends. One front end is for the Tenant and the other front end is for the Land Lord.
+    </p>
+    <h1>Land Lord front end features:  </h1>
+    <p>
+        1) You can upload/edit/delete tenants, properties, receipts, news related to those properties, account information,
+        and pictures.
+    </p>
+    <p>2) It is integrated with Auth0 for authentication.</p>
+    <p>3) It auto suggests addresses when filling out or updating the property form using the HERE api.</p>
+    <p>
+        4) It also has automated task scheduling  using
+        Hangfire. Once a day it checks if there are any leases that are about to expire and it will send a text message via Twillo or an email via Azure.
+    </p>
+    <p>5)  It has a dashboard for analytics.</p>
+    <p>
+        5A)
+        At the top
+        there are a series of quick facts. It outlines some quick statistics including: total number of tenants, total number of properties, total property taxes paid for the year, and total expenses for the
+        year (Receipts).
+    </p>
+    <p>
+        5B)
+        In the second tier of windows, there are series of graphs that further analyze the data. The first graph analyzes your expenses occurred for each month, 2nd graph shows how many
+        tenants you add each month, and the 3rd graph shows how many properties you add each year.
+    </p>
+    <p>
+        5C)
+        Lastly, the Google Maps at the bottom displays all your properties on the map. If you click on the marker
+        it shows the street address.
+    </p>
+
+    <p>
+        6) It also has a messenger page. It pulls all the tenants that where added and the Landlord can hold a conversation individually with each tenant without having to resort to email.
+    </p>
+
+    <p> ** Please note you need to be added as a tenant to a property if you want to log in as a tenant to see the relevant information **</p>
+
+
+    <h1>Tenant front end features:  </h1>
+    <p>
+        This contains a dashboard that will allow the users to do the following:
+
+    <p>	1) Pay their rent (This shows when rent is due and how much. It is dynamically calculated based on when the lease date expired and when the tenant is added to the system) </p>
+    <p> 2) View payment history (This shows some quick facts of how much rent they paid each month and they can see each individual transaction that has occurred) </p>
+    <p> 3) See news related to their apartment (Landlords can push out news related their apartments such as potential outages or planned upgrades)</p>
+    <p> 4) Edit their account information (They can enter their edit their name, phone number, and add a profile picture)</p>
+    <p> 5) Contact their land lord (That info. card contains the land lords name, email and phone number. When the user tries to contact the Landlord, it will send an email to the Land Lord and the Tenant and Landlord can continue with conversation over email.)</p>
+    <p>
+        6) Lastly, it contains a chat widget that enables you to talk to the land lord in real time.
+        Its a chat application. It is located in the lower right hand of the page.
+    </p>
+    .
+
+    This application is integrated with Stripe for payment processing and Auth0 for authentication. It uses the Twillo Chat API for the backend of the chat application.
+    </p>
+
+
+
+
+
+    <p>
+        It has aspects of Bootstrap
         and Material UI. Please click on the GITHUB picture below to see my code or
-        the LIVE picture to see my app live!
-    </h3>
+        the LIVE pictures to see my apps live!
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,77 +230,984 @@
 
 </div>
 
-<div class="text-center"> 
-<h1> Database Screenshots:</h1>
+<div class="text-center">
+    <h1>Screenshots:</h1>
 </div>
 
-    <div class="ui-widget-content" data-toggle="popover" data-placement="top" data-content="CLICK ON ME!!" data-trigger="hover">
-        <div class="zoom-gallery">
+<div class="ui-widget-content" data-toggle="popover" data-placement="top" data-content="CLICK ON ME!!" data-trigger="hover">
+    <div class="zoom-gallery">
 
-            <div class="owl-carousel owl-theme owl-loaded owl-drag">
-
-
+        <div class="owl-carousel owl-theme owl-loaded owl-drag">
 
 
 
-                <div class="owl-stage-outer">
-                    <div class="owl-stage" style="transform: translate3d(-1806px, 0px, 0px); transition: all 0s ease 0s; width: 7226px;">
 
 
-                        <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-                            <div class="item">
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(-1806px, 0px, 0px); transition: all 0s ease 0s; width: 7226px;">
 
-                                <a href="~/ReactAmsPics/AmsDbTables1.PNG" title="The Properties table collects inforation regarding properties. Guid is the primary key. **** Tenants table collects
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/AmsDbTables1.PNG" title="The Properties table collects inforation regarding properties. Guid is the primary key. **** Tenants table collects
                                    information regarding the tenant. Guid is the foreign key that ties it to the properties table. The relationship is 1 to many. tenGuid is the primary key. ***
                                    The Images table contains information regarding the image being uploaded. Guid is the primary key. It is a foreign key the Receipts table as ImageGuid.
                                    The relationship is 1 to 1.
                                    *** The Receipt table collect information regarding expenses. It collects the receipt information and any image information. The primay key is id.">
-                                    <div><img src="~/ReactAmsPics/AmsDbTables1.PNG"> </div>
-                                </a>
+                                <div><img src="~/ReactAmsPics/AmsDbTables1.PNG"> </div>
+                            </a>
 
 
-                            </div>
                         </div>
-
-
                     </div>
+
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (1).JPEG" title="Loggin In">
+                                <div><img src="~/ReactAmsPics/LL (1).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (2).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (2).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (3).JPEG" title="dashboard which shows quick stats, graphs based on your data and your properties on Google Maps">
+                                <div><img src="~/ReactAmsPics/LL (3).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (4).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (4).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (5).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (5).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (6).JPEG" title="Showing Properties Page">
+                                <div><img src="~/ReactAmsPics/LL (6).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (7).JPEG" title="Adding Property/Suggesting Property">
+                                <div><img src="~/ReactAmsPics/LL (7).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (8).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (8).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (9).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (9).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (10).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (10).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (11).JPEG" title="Update Property Information">
+                                <div><img src="~/ReactAmsPics/LL (11).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (12).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (12).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (13).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (13).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (14).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (14).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (15).JPEG" title="Remove Property">
+                                <div><img src="~/ReactAmsPics/LL (15).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (16).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (16).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (17).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (17).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (18).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (18).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (19).JPEG" title="Add Tenant to Property">
+                                <div><img src="~/ReactAmsPics/LL (19).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (20).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (20).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (21).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (21).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (22).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (22).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (23).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (23).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (24).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (24).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (25).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (25).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (26).JPEG" title="Add Receipts">
+                                <div><img src="~/ReactAmsPics/LL (26).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (27).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (27).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (28).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (28).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (29).JPEG" title="view picture of receipt">
+                                <div><img src="~/ReactAmsPics/LL (29).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (30).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (30).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (31).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (31).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (32).JPEG" title="view receipt information">
+                                <div><img src="~/ReactAmsPics/LL (32).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (33).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (33).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (34).JPEG" title="update receipt information">
+                                <div><img src="~/ReactAmsPics/LL (34).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (35).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (35).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (36).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (36).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (37).JPEG" title="remove receipt">
+                                <div><img src="~/ReactAmsPics/LL (37).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (38).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (38).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (39).JPEG" title="Edit Account Information">
+                                <div><img src="~/ReactAmsPics/LL (39).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (40).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (40).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (41).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (41).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (42).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (42).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (43).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (43).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (44).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (44).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (45).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (45).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (46).JPEG" title="Add Announcement for Tenants to see when they log in">
+                                <div><img src="~/ReactAmsPics/LL (46).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (47).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (47).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (48).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (48).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (49).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (49).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (50).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (50).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (51).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (51).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (52).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (52).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (53).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (53).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (54).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (54).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (55).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (55).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (56).JPEG" title="Delete Announcement">
+                                <div><img src="~/ReactAmsPics/LL (56).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (57).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (57).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (58).JPEG" title="Chat with Tenants">
+                                <div><img src="~/ReactAmsPics/LL (58).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (59).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (59).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (60).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (60).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (61).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (61).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (62).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (62).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (63).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (63).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (64).JPEG" title="Logging Out">
+                                <div><img src="~/ReactAmsPics/LL (64).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (65).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (65).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/LL (66).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/LL (66).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+               
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (1).JPEG" title="Logging In">
+                                <div><img src="~/ReactAmsPics/TS (1).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (2).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (2).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (3).JPEG" title="Home Page">
+                                <div><img src="~/ReactAmsPics/TS (3).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (4).JPEG" title="Chat with Landlord">
+                                <div><img src="~/ReactAmsPics/TS (4).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (5).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (5).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (6).JPEG" title="Pay rent">
+                                <div><img src="~/ReactAmsPics/TS (6).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (7).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (7).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (8).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (8).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (9).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (9).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (10).JPEG" title="View Payment History">
+                                <div><img src="~/ReactAmsPics/TS (10).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (11).JPEG" title="You can pay rent here too">
+                                <div><img src="~/ReactAmsPics/TS (11).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (12).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (12).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (13).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (13).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (14).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (14).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (15).JPEG" title="Send email to Landlord">
+                                <div><img src="~/ReactAmsPics/TS (15).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (16).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (16).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (17).JPEG" title="Edit Personal Information">
+                                <div><img src="~/ReactAmsPics/TS (17).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+
+                            <a href="~/ReactAmsPics/TS (18).JPEG" title="">
+                                <div><img src="~/ReactAmsPics/TS (18).JPEG"> </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+
+
                 </div>
-
-
             </div>
+
+
         </div>
+    </div>
 
 
 
 
+</div>
+
+
+
+
+
+
+<div class="wrapper">
+
+    <div class="ImgOverLaycontainer">
+        <a href="https://amstenantfrontend.azurewebsites.net" target="_blank">
+            <img src="~/RegularPics/Live.png" title="Click Me to See the Tenant Website live" alt="Live logo" class="centerimg">
+            <div class="overlay">
+                <h1 class="imgText"> Click Me to See the Tenant Website live </h1>
+            </div>
+        </a>
+    </div>
+
+    <div class="ImgOverLaycontainer">
+        <a href="https://github.com/dim505/ApartmentMangementSystem" target="_blank">
+            <img src="~/RegularPics/githublogo.png" title="Click Me to See Code" alt="github logo" class="centerimg">
+            <div class="overlay">
+                <h1 class="imgText"> Please Click Here to See My Code </h1>
+            </div>
+        </a>
     </div>
 
 
-
-
-
-
-    <div class="wrapper">
-
-        <div class="ImgOverLaycontainer">
-            <a href="https://github.com/dim505/ApartmentMangementSystem" target="_blank">
-                <img src="~/RegularPics/githublogo.png" title="Click Me to See Code" alt="github logo" class="centerimg">
-                <div class="overlay">
-                    <h1 class="imgText"> Please Click Here to See My Code </h1>
-                </div>
-            </a>
-        </div>
-
-
-        <div class="ImgOverLaycontainer">
-            <a href="https://amsfrontend.azurewebsites.net" target="_blank">
-                <img src="~/RegularPics/Live.png" title="Click Me to See App live" alt="Live logo" class="centerimg">
-                <div class="overlay">
-                    <h1 class="imgText"> Please Click Here to See My Application Live </h1>
-                </div>
-            </a>
-        </div>
+    <div class="ImgOverLaycontainer">
+        <a href="https://amsfrontend.azurewebsites.net" target="_blank">
+            <img src="~/RegularPics/Live.png" title="Click Me to See the Land Lord website live" alt="Live logo" class="centerimg">
+            <div class="overlay">
+                <h1 class="imgText"> Click Me to See the Land Lord website live </h1>
+            </div>
+        </a>
     </div>
+
+
+</div>
 
 
 

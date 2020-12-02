@@ -1,0 +1,227 @@
+﻿@page
+@model MyApp.Namespace.ReactWebStoreModel
+@{
+}
+
+@{
+    ViewData["Title"] = "Social Media";
+
+}
+
+<script>
+
+    $(document).ready(function () {
+
+
+        var $videoSrc;
+        $('.video-btn').click(function () {
+            $videoSrc = $(this).data("src");
+        });
+        console.log($videoSrc);
+
+
+
+
+        $('#myModal').on('shown.bs.modal', function (e) {
+            $('[data-toggle="popover"]').popover('dispose')
+
+
+            $("#video").attr('src', $videoSrc);
+            $("#video").removeClass("progressive__img progressive--not-loaded").addClass("progressive__img progressive--is-loaded");
+
+        })
+
+
+
+
+
+
+        $('#myModal').on('hide.bs.modal', function (e) {
+
+            $("#video").attr('src', $videoSrc);
+            $('[data-toggle="popover"]').popover()
+
+
+
+        })
+
+
+
+
+
+
+
+
+        $(".owl-carousel").owlCarousel({
+            //keeps carousel automaticly playing upon load
+            autoplay: true,
+            //The number of items you want to see on the screen.
+            items: 4,
+            //centers picture works well with odd number of pictures
+            center: true,
+            //restartes carousel once it gets to last picture
+            loop: true,
+            //determines margin-right on picture
+            margin: 10,
+            // this Shows next/prev buttons
+            nav: true,
+            //hows the number of active pictures based on screen res. makes it responsive
+            responsive: {
+                200: {
+                    items: 1
+                },
+                800: {
+                    items: 2
+                },
+
+                1000: {
+                    items: 3
+                }
+
+            }
+        });
+
+        //code to initialize the zoom in for the ams gallery
+        $('.zoom-gallery').magnificPopup({
+            // the selector for gallery item
+            delegate: 'a',
+            //specifies pop up type
+            type: 'image',
+
+            //puts close BTN in couner of page instead of near the picture
+            closeBtnInside: false,
+            //classes used for  CSS animation
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+
+            image: {
+                //Fits image in area vertically
+                verticalFit: true,
+                //gets title and displays it at botton of pic
+                titleSrc: function (item) {
+                    //gets img title
+                    return item.el.attr('title')
+                }
+            },
+            //gallery allows you yo switch the content of the popup and adds navigation arrows.
+            gallery: {
+                //enables gallery option
+                enabled: true
+            },
+            //enables the zoom effect when pictures are clicked
+            zoom: {
+                //enables zoom option
+                enabled: true,
+                //// duration of the effect, in milliseconds
+                duration: 300,
+                //looks for the img element to zoom into
+                opener: function (element) {
+                    return element.find('img');
+                }
+            }
+
+        })
+
+    });
+
+
+
+</script>
+
+
+<div class="text-right">
+
+    <h2 class="display-4 mb-0">Please see my Social Media Web App. </h2>
+
+</div>
+
+
+<div class="text-center">
+    <h3 class="blockquote-footer text-right">
+        My application is now <a href="https://socialmediafrontend.azurewebsites.net/"> live!!</a>
+
+    </h3><h1> Technical information:  </h1>
+    <p>
+        1) It has a React JS front end, an ASP.Net API for the back-end and it is connected to a SQL database hosted in Azure.
+        Currently, it features various aspects from the Material UI Framework.
+    </p>
+
+    <p>
+        2) It stores the image and videos to Azure Blob storage.
+    </p>
+
+
+    <p>
+        2) Also, it uses Auth0 for authentication as a service. Auth0 helps me handle the complexity of authentication and authorization for my webstore. It helps me determine who is a valid user and who can access
+        restricted parts of the website.
+    </p>
+    <h1> Non technical information:  </h1>
+    <p>
+        1) You are able to like/edit/add/delete/share posts, edit/add/delete comments, and attach images and videos to the posts. Lastly, you will receive notifications of people following you.
+    </p>
+    <p>
+        2) Upload your profile and banner photos. Edit account information, and view some quick profile statistics on your account like the number of posts you liked, number of followers, and the number of people you are following.
+    </p>
+    <p>
+        3) View a list of suggested people to follow, follow people, view followers and following and view other peoples profiles/information.
+    </p>
+    <p>
+        4) Search post content and other users. This web app is mobile optimized.
+    </p>
+
+    <p>
+        5) Speech to text is now supported (only on Google Chrome). When you add a post/comment, you can now talk out your new post/comment.
+    </p>
+
+
+    <p>
+        6) Meessage your followers though the messenger app. You can send messages, add attachments and emojis. If you are following a person and they follow you, you can message them.
+            You can all search though the list of coversations you had, and compose new messages.
+    </p>
+
+    <p>
+        7) Now I am working on enabling users call each other via the phone and video chat each other.
+    </p>
+
+    <p>
+        Please click on the Github picture to see my code or my live picture to see the app live!!
+    </p>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="wrapper">
+
+    <div class="ImgOverLaycontainer">
+        <a href="https://github.com/dim505/SocialMedia" target="_blank">
+            <img src="~/RegularPics/githublogo.png" title="Click Me to See Code" alt="github logo" class="centerimg">
+            <div class="overlay">
+                <h1 class="imgText"> Please Click Here to See My Code </h1>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="ImgOverLaycontainer">
+        <a href="https://socialmediafrontend.azurewebsites.net/" target="_blank">
+            <img src="~/RegularPics/Live.png" title="Click Me to See App live" alt="Live logo" class="centerimg">
+            <div class="overlay">
+                <h1 class="imgText"> Please Click Here to See My Application Live </h1>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+

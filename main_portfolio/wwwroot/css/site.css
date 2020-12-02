@@ -530,5 +530,11 @@ img {
 
 
 .mfp-img {
-    width: 70% !important;
+    width: 100% !important;
+  
+}
+
+.mfp-content {
+    width: 80% !important;
+    
 }

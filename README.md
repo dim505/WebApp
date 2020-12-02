@@ -2,7 +2,8 @@
 This repository will serve as a central point of all the projects I've done with more to come. I've experimented with HTML, CSS, Bootstrap, JavaScript  and JQuery in designing this website. 
 
 Please see my portfolio live at (http://dmitriyprogrammingportfolio.tk/). It is automatically redeployed via a CI/CD pipeline to Azure with every commit to Github. 
-At the moment I have 2 web based calculators, a link to my desktop application, and a link to my React JS Webstore. Alternatively, you can access my website via this URL: dmitriywebapp.azurewebsites.net
+At the moment I have 2 web based calculators, a link to my desktop application, and a link to my React JS Webstore, an Apartment Management System and now a social media web app.
+Alternatively, you can access my website via this URL: dmitriywebapp.azurewebsites.net
 
 Main_Portfolio Folder:  
 C# Calculator:
@@ -13,11 +14,21 @@ This is written in JavaScript, HTML, and CSS with elements of JQuery and Popper 
 
 Other Projects:
 
-React JS Webstore:
+Please see my Social Media Web App live:
 
-I am developing a webstore that will have a React JS front end, ASP.Net API for the backend and it will connect to a SQL database.
+https://socialmediafrontend.azurewebsites.net/
 
-Please see my Web Store being developed live:
+Please see my Apartment Management System (Landlord side) live:
+
+https://amsfrontend.azurewebsites.net/
+
+
+Please see my Apartment Management System (Tenant side) live:
+
+https://amstenantfrontend.azurewebsites.net/
+
+
+Please see my Web Store live:
 
 https://reactwebstore.azurewebsites.net
 
@@ -46,5 +57,6 @@ So far my projects have touched upon these technologies:
     C#
     SQL
 	React JS
+	Azure
 	
 	
