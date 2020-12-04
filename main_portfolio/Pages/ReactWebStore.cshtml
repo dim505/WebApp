@@ -8,124 +8,124 @@
 
 }
 
-    <script>
+<script>
 
-        $(document).ready(function () {
-
-
-            var $videoSrc;
-            $('.video-btn').click(function () {
-                $videoSrc = $(this).data("src");
-            });
-            console.log($videoSrc);
+    $(document).ready(function () {
 
 
-
-
-            $('#myModal').on('shown.bs.modal', function (e) {
-                $('[data-toggle="popover"]').popover('dispose')
-
-
-                $("#video").attr('src', $videoSrc);
-                $("#video").removeClass("progressive__img progressive--not-loaded").addClass("progressive__img progressive--is-loaded");
-
-            })
+        var $videoSrc;
+        $('.video-btn').click(function () {
+            $videoSrc = $(this).data("src");
+        });
+        console.log($videoSrc);
 
 
 
 
+        $('#myModal').on('shown.bs.modal', function (e) {
+            $('[data-toggle="popover"]').popover('dispose')
 
 
-            $('#myModal').on('hide.bs.modal', function (e) {
+            $("#video").attr('src', $videoSrc);
+            $("#video").removeClass("progressive__img progressive--not-loaded").addClass("progressive__img progressive--is-loaded");
 
-                $("#video").attr('src', $videoSrc);
-                $('[data-toggle="popover"]').popover()
-
-
-
-            })
+        })
 
 
 
 
 
 
+        $('#myModal').on('hide.bs.modal', function (e) {
+
+            $("#video").attr('src', $videoSrc);
+            $('[data-toggle="popover"]').popover()
 
 
-            $(".owl-carousel").owlCarousel({
-                //keeps carousel automaticly playing upon load
-                autoplay: true,
-                //The number of items you want to see on the screen.
-                items: 4,
-                //centers picture works well with odd number of pictures
-                center: true,
-                //restartes carousel once it gets to last picture
-                loop: true,
-                //determines margin-right on picture
-                margin: 10,
-                // this Shows next/prev buttons
-                nav: true,
-                //hows the number of active pictures based on screen res. makes it responsive
-                responsive: {
-                    200: {
-                        items: 1
-                    },
-                    800: {
-                        items: 2
-                    },
 
-                    1000: {
-                        items: 3
-                    }
+        })
 
-                }
-            });
 
-            //code to initialize the zoom in for the ams gallery
-            $('.zoom-gallery').magnificPopup({
-                // the selector for gallery item
-                delegate: 'a',
-                //specifies pop up type
-                type: 'image',
 
-                //puts close BTN in couner of page instead of near the picture
-                closeBtnInside: false,
-                //classes used for  CSS animation
-                mainClass: 'mfp-with-zoom mfp-img-mobile',
 
-                image: {
-                    //Fits image in area vertically
-                    verticalFit: true,
-                    //gets title and displays it at botton of pic
-                    titleSrc: function (item) {
-                        //gets img title
-                        return item.el.attr('title')
-                    }
+
+
+
+
+        $(".owl-carousel").owlCarousel({
+            //keeps carousel automaticly playing upon load
+            autoplay: true,
+            //The number of items you want to see on the screen.
+            items: 4,
+            //centers picture works well with odd number of pictures
+            center: true,
+            //restartes carousel once it gets to last picture
+            loop: true,
+            //determines margin-right on picture
+            margin: 10,
+            // this Shows next/prev buttons
+            nav: true,
+            //hows the number of active pictures based on screen res. makes it responsive
+            responsive: {
+                200: {
+                    items: 1
                 },
-                //gallery allows you yo switch the content of the popup and adds navigation arrows.
-                gallery: {
-                    //enables gallery option
-                    enabled: true
+                800: {
+                    items: 2
                 },
-                //enables the zoom effect when pictures are clicked
-                zoom: {
-                    //enables zoom option
-                    enabled: true,
-                    //// duration of the effect, in milliseconds
-                    duration: 300,
-                    //looks for the img element to zoom into
-                    opener: function (element) {
-                        return element.find('img');
-                    }
+
+                1000: {
+                    items: 3
                 }
 
-            })
-
+            }
         });
 
+        //code to initialize the zoom in for the ams gallery
+        $('.zoom-gallery').magnificPopup({
+            // the selector for gallery item
+            delegate: 'a',
+            //specifies pop up type
+            type: 'image',
+
+            //puts close BTN in couner of page instead of near the picture
+            closeBtnInside: false,
+            //classes used for  CSS animation
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+
+            image: {
+                //Fits image in area vertically
+                verticalFit: true,
+                //gets title and displays it at botton of pic
+                titleSrc: function (item) {
+                    //gets img title
+                    return item.el.attr('title')
+                }
+            },
+            //gallery allows you yo switch the content of the popup and adds navigation arrows.
+            gallery: {
+                //enables gallery option
+                enabled: true
+            },
+            //enables the zoom effect when pictures are clicked
+            zoom: {
+                //enables zoom option
+                enabled: true,
+                //// duration of the effect, in milliseconds
+                duration: 300,
+                //looks for the img element to zoom into
+                opener: function (element) {
+                    return element.find('img');
+                }
+            }
+
+        })
+
+    });
 
 
-    </script>
+
+</script>
 
 
 <div class="text-right">
@@ -298,6 +298,8 @@
                 <div class="owl-stage" style="transform: translate3d(-1806px, 0px, 0px); transition: all 0s ease 0s; width: 7226px;">
 
 
+                   
+
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
                             <a href="~/WebstorePics/WebStoreDbTables3.PNG" title="These 3 tables belong to the Account Details Page. Each table corrsponds to a form.
@@ -339,8 +341,8 @@
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
 
                         <div class="item">
-                            <a href="/WebstorePics/1.JPEG" title="Main Page">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/1.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/1.JPEG"> </div>
+                            <a href="/WebstorePics/WS (1).JPEG" title="Main Page">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (1).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/1.JPEG"> </div>
                             </a>
                         </div>
 
@@ -349,8 +351,8 @@
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/2.JPEG" title="Adding Item to Cart">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/2.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/2.JPEG"> </div>
+                            <a href="/WebstorePics/WS (2).JPEG" title="Adding Item to Cart">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (2).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (2).JPEG"> </div>
                             </a>
                         </div>
 
@@ -359,192 +361,395 @@
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/3.JPEG" title="Adding Item to Cart">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/3.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/3.JPEG"> </div>
+                            <a href="/WebstorePics/WS (3).JPEG" title="Adding Item to Cart">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (3).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (3).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/4.JPEG" title="Updating Item Quantity">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/4.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/4.JPEG"> </div>
+                            <a href="/WebstorePics/WS (4).JPEG" title="Adding Item to Cart">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (4).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (4).JPEG"> </div>
                             </a>
                         </div>
-                    </div>
 
-                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-
-                        <div class="item">
-                            <a href="/WebstorePics/5.JPEG" title="Updating Item Quantity">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/5.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/5.JPEG"> </div>
-                            </a>
-                        </div>
 
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
-
                         <div class="item">
-                            <a href="/WebstorePics/6.JPEG" title="Updating Item Quantity">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/6.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/6.JPEG"> </div>
+                            <a href="/WebstorePics/WS (5).JPEG" title="Adding Item to Cart">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (5).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (5).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/7.JPEG" title="Updating Item Quantity">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/7.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/7.JPEG"> </div>
+                            <a href="/WebstorePics/WS (6).JPEG" title="Adding Item to Cart">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (6).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (6).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/8.JPEG" title="Checking Out">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/8.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/8.JPEG"> </div>
+                            <a href="/WebstorePics/WS (7).JPEG" title="Adding Item to Cart">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (7).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (7).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/9.JPEG" title="Checking Out">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/9.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/9.JPEG"> </div>
+                            <a href="/WebstorePics/WS (8).JPEG" title="Adding Item to Cart">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (8).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (8).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/10.JPEG" title="Checking Out">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/10.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/10.JPEG"> </div>
+                            <a href="/WebstorePics/WS (9).JPEG" title="Adding Item to Cart">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (9).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (9).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/11.JPEG" title="">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/11.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/11.JPEG"> </div>
+                            <a href="/WebstorePics/WS (10).JPEG" title="Updating Item Quantity">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (10).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (10).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/12.JPEG" title="Logging In">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/12.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/12.JPEG"> </div>
+                            <a href="/WebstorePics/WS (11).JPEG" title="Updating Item Quantity">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (11).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (11).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/13.JPEG" title="">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/13.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/13.JPEG"> </div>
+                            <a href="/WebstorePics/WS (12).JPEG" title="Updating Item Quantity">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (12).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (12).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/14.JPEG" title="Going to Account Details Page">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/14.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/14.JPEG"> </div>
+                            <a href="/WebstorePics/WS (13).JPEG" title="Updating Item Quantity">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (13).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (13).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/15.JPEG" title="Filling in Account Information">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/15.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/15.JPEG"> </div>
+                            <a href="/WebstorePics/WS (14).JPEG" title="Updating Item Quantity">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (14).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (14).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/16.JPEG" title="Filled and Saved Primary Account Information">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/16.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/16.JPEG"> </div>
+                            <a href="/WebstorePics/WS (15).JPEG" title="Checking Out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (15).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (15).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/17.JPEG" title="Filled and Saved Default Delivery Account Information">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/17.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/17.JPEG"> </div>
+                            <a href="/WebstorePics/WS (16).JPEG" title="Checking Out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (16).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (16).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/18.JPEG" title="">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/18.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/18.JPEG"> </div>
+                            <a href="/WebstorePics/WS (17).JPEG" title="Checking Out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (17).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (17).JPEG"> </div>
                             </a>
                         </div>
-                    </div>
 
-                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
 
-                        <div class="item">
-                            <a href="/WebstorePics/19.JPEG" title="Information from the account details page automaticly fills in at checkout">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/19.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/19.JPEG"> </div>
-                            </a>
-                        </div>
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/20.JPEG" title="Checking Out">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/20.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/20.JPEG"> </div>
+                            <a href="/WebstorePics/WS (18).JPEG" title="Checking Out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (18).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (18).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/21.JPEG" title="">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/21.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/21.JPEG"> </div>
+                            <a href="/WebstorePics/WS (19).JPEG" title="Checking Out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (19).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (19).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/22.JPEG" title="Logging Out">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/22.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/22.JPEG"> </div>
+                            <a href="/WebstorePics/WS (20).JPEG" title="Checking Out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (20).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (20).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/23.JPEG" title="">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/23.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/23.JPEG"> </div>
+                            <a href="/WebstorePics/WS (21).JPEG" title="Checking Out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (21).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (21).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/24.JPEG" title="">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/24.JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/24.JPEG"> </div>
+                            <a href="/WebstorePics/WS (22).JPEG" title="Checking Out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (22).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (22).JPEG"> </div>
                             </a>
                         </div>
+
+
                     </div>
 
                     <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
                         <div class="item">
-                            <a href="/WebstorePics/25.PNG" title="Order History Page: this page retrives all the orders placed under that account">
-                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/25.PNG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/25.PNG"> </div>
+                            <a href="/WebstorePics/WS (23).JPEG" title="Logging In">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (23).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (23).JPEG"> </div>
                             </a>
                         </div>
 
+
                     </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (24).JPEG" title="Logging In">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (24).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (24).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (25).JPEG" title="Logging In">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (25).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (25).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (26).JPEG" title="Logging In">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (26).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (26).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (27).JPEG" title="Viewing/Editing Account Information on Account Details Page">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (27).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (27).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (28).JPEG" title="Viewing/Editing Account Information on Account Details Page">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (28).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (28).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (29).JPEG" title="Viewing/Editing Account Information on Account Details Page">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (29).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (29).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (30).JPEG" title="Viewing/Editing Account Information on Account Details Page">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (30).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (30).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (31).JPEG" title="Viewing/Editing Account Information on Account Details Page">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (31).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (31).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (32).JPEG" title="Viewing/Editing Account Information on Account Details Page">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (32).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (32).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (33).JPEG" title="Viewing/Editing Account Information on Account Details Page">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (33).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (33).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (34).JPEG" title="Account Information is now being prefilled at checkout">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (34).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (34).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (35).JPEG" title="Account Information is now being prefilled at checkout">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (35).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (35).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (36).JPEG" title="View Order History">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (36).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (36).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (37).JPEG" title="View Order History">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (37).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (37).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (38).JPEG" title="Completing the rest of the check out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (38).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (38).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (39).JPEG" title="Completing the rest of the check out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (39).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (39).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (40).JPEG" title="Completing the rest of the check out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (40).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (40).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-item " style="width: 291.067px; margin-right: 10px;">
+                        <div class="item">
+                            <a href="/WebstorePics/WS (41).JPEG" title="Completing the rest of the check out">
+                                <div><img src="http://dmitriyprogrammingportfolio.tk/WebstorePics/WS (41).JPEG" class="progressive__img progressive--is-loaded" data-progressive="/WebstorePics/WS (41).JPEG"> </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+
 
 
 
