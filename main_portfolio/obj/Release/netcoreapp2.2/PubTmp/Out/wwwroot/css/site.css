@@ -2,539 +2,518 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 .navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 .navbar-nav {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
 }
 /*containment div for draggable javascript calc*/
 #containment {
-height: 100vh;
-width:100%;
-
-
+    height: 100vh;
+    width: 100%;
 }
 /*div styling for javascript calc */
 #draggable {
-	display: table;
-	border:solid black 1px;
-	border-radius: 5px;
-	padding: 20px;
-	transition: 0.3s;
-	
+    display: table;
+    border: solid black 1px;
+    border-radius: 5px;
+    padding: 20px;
+    transition: 0.3s;
 }
-/*div styling for border of javascript calc w/ mouse hover*/
-#draggable:hover {
-	cursor: all-scroll;
-	border: 2px solid red;
+    /*div styling for border of javascript calc w/ mouse hover*/
+    #draggable:hover {
+        cursor: all-scroll;
+        border: 2px solid red;
+    }
 
-}
-
-/* styling for  text on home page*/ 
+/* styling for  text on home page*/
 #IndexDivText {
-	width:100%; 
-	text-align:right;
-	z-index:2;
-	
-	
+    width: 100%;
+    text-align: right;
+    z-index: 2;
 }
 /*more javascript calc styling*/
 
 #display {
     border: 1px solid gray;
     border-radius: 5px;
-	text-align:right;
-	background-color: white;
-
+    text-align: right;
+    background-color: white;
 }
 
 .btn {
-	
-	width:100%;
-	
-	
+    width: 100%;
 }
-/*styling to center images */ 
+/*styling to center images */
 .centerimg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50% !important;
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50% !important;
 }
 
-.centerimg:hover {
-	    border-style: solid;
-  border-color: red;
-	
-	
-}
+    .centerimg:hover {
+        border-style: solid;
+        border-color: red;
+    }
 
 
-/* styling for drop down */ 
+/* styling for drop down */
 
 .Cssdropdown {
-  float: left;
-  overflow: hidden;
+    float: left;
+    overflow: hidden;
 }
 
-.Cssdropdown .dropbtn:hover {
-	color:red;	
-	
-}
-.Cssdropdown .dropbtn {
-  transition: all .4s ease-in-out !important;
-  border: none;
-  outline: none;
-  padding: 8px;
-  padding-right:16px;
-  background-color: white;
-  font-family: inherit;
-  margin: 0;
+    .Cssdropdown .dropbtn:hover {
+        color: red;
+    }
 
-}
+    .Cssdropdown .dropbtn {
+        transition: all .4s ease-in-out !important;
+        border: none;
+        outline: none;
+        padding: 8px;
+        padding-right: 16px;
+        background-color: white;
+        font-family: inherit;
+        margin: 0;
+    }
 
 .caret {
-  content: '';
-  top: 1.2em;
-  margin-left: 3px;
-  position: absolute;
-  border-top: 5px solid #1b1616;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
+    content: '';
+    top: 1.2em;
+    margin-left: 3px;
+    position: absolute;
+    border-top: 5px solid #1b1616;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 140px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  list-style-type: none;
-  padding-left: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding-left: 10px;
 }
 
-.dropdown-content a {
-	color:black;
-	display: block;
-	transition: all .2s ease-in-out !important;	
-}
+    .dropdown-content a {
+        color: black;
+        display: block;
+        transition: all .2s ease-in-out !important;
+    }
 
-.dropdown-content a:hover {
-	color:red;
-	display: block;
-}
+        .dropdown-content a:hover {
+            color: red;
+            display: block;
+        }
 
 
 .Cssdropdown:hover .dropdown-content {
-  display: block;
-
+    display: block;
 }
 
 
-/* styling for the C# calculator */ 
-.title{ 
- margin-bottom: 10px; 
- text-align:center; 
- width: 210px; 
- color:blue; 
- border: solid black 3px; 
- } 
+/* styling for the C# calculator */
+.title {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 210px;
+    color: blue;
+    border: solid black 3px;
+}
 
 .calc table {
-	width:210px;	
+    width: 210px;
 }
 
-.calc td input[type=submit] 
- { 
-	
- background-color:blue; 
- color: white; 
- border: solid black 2px; 
- width:100%; 
- } 
+.calc td input[type=submit] {
+    background-color: blue;
+    color: white;
+    border: solid black 2px;
+    width: 100%;
+}
 
-.calc td input[type=text]
- { 
- background-color:white; 
- border: solid black 2px; 
- width:100%; 
- } 
+.calc td input[type=text] {
+    background-color: white;
+    border: solid black 2px;
+    width: 100%;
+}
 
- /*override Bootstrap css for nav buttons*/
- .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus{
-	 color:red;
-	 
- }
+/*override Bootstrap css for nav buttons*/
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+    color: red;
+}
 
 .navbar-light .navbar-brand {
-	 color:black;
-	 transition: all .2s ease-in-out !important;
-} 
- 
- .navbar-light .navbar-nav .nav-link {
-	 color:black;
-	 transition: all .2s ease-in-out !important;
- }
- 
- /*additional styling for carousel on AMS page*/ 
+    color: black;
+    transition: all .2s ease-in-out !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    transition: all .2s ease-in-out !important;
+}
+
+/*additional styling for carousel on AMS page*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  outline: black;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 3px solid black;
-  background-image: none;
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-image: none;
 }
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: red;
-}
+    .carousel-control-next-icon:after {
+        content: '>';
+        font-size: 55px;
+        color: red;
+    }
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: red;
-}
+    .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 55px;
+        color: red;
+    }
 
 
 .carousel-caption {
-	color: black;
-	border: 3px solid;
+    color: black;
+    border: 3px solid;
 }
 
 
-.carousel-caption p {
-	background-color: red;
-	display: inline-block;
-	border: 0.5px solid;
-	padding-right: 5px;
-	padding-left:5px;
-}
+    .carousel-caption p {
+        background-color: red;
+        display: inline-block;
+        border: 0.5px solid;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
 
 
 .AMS .carousel-indicators li {
-	background-color: black;
-
+    background-color: black;
 }
 
 .AMS .carousel-item img {
-	width: 1290px;
-
-	
-	
+    width: 1290px;
 }
 
 .blockquote-footer {
-	font-size:100%;
-	
-	
+    font-size: 100%;
 }
 
-/*make all text center on AMS page */ 
+/*make all text center on AMS page */
 
-.AMS p, .AMS h4, .AMS h1  {
-	
-	text-align: center;
-	
+.AMS p, .AMS h4, .AMS h1 {
+    text-align: center;
 }
 
-/*styling for mini picture carousel */ 
-.owl-stage-outer img{
-	height: 280px;
-	
-	
-	
+/*styling for mini picture carousel */
+.owl-stage-outer img {
+    height: 280px;
 }
 
 /* set body to display none for the fade effects to work correctly */
 body {
-	display: none;
-	
-	
-	
-	
+    display: none;
 }
 
 /*styling for website preloader */
 
 .preloader {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 9999;
-   background-image: url('../RegularPics/preload.gif');
-   background-repeat: no-repeat; 
-   background-color: white;
-   background-position: center;
-   display: none;
-  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 9999;
+    background-image: url('../RegularPics/preload.gif');
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    display: none;
 }
 
-/*styling for the IE warning */ 
+/*styling for the IE warning */
 .alert {
-	display: none;
+    display: none;
 }
 
-/*styling for the image pop up on the AMS page image carasol */ 
+/*styling for the image pop up on the AMS page image carasol */
 .image-source-link {
-	color: #98C3D1;
+    color: #98C3D1;
 }
 
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
-	opacity: 0;
-	-webkit-backface-visibility: hidden;
-	-webkit-transition: all 0.3s ease-out; 
-	-moz-transition: all 0.3s ease-out; 
-	-o-transition: all 0.3s ease-out; 
-	transition: all 0.3s ease-out;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .mfp-with-zoom.mfp-ready .mfp-container {
-		opacity: 1;
+    opacity: 1;
 }
+
 .mfp-with-zoom.mfp-ready.mfp-bg {
-		opacity: 0.8;
+    opacity: 0.8;
 }
 
-.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
-	opacity: 0;
+    opacity: 0;
 }
 
 
 
-.wrapper{
-  display: flex;
-  justify-content: center;
+.wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 
-.wrapper img{ 
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:100% !important;
-
-
-}
+    .wrapper img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100% !important;
+    }
 
 /*styling for div overlay on Github and Live pictures*/
 
 .overlay {
-	  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     opacity: 0;
-  transition: .5s ease;
-  background-color:white;	
-  
-	
+    transition: .5s ease;
+    background-color: white;
 }
 
 .imgText {
-	
-	
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-
-  font-family: "Times New Roman", Times, serif;
-	
-}
-.ImgOverLaycontainer{ 
-	width:100%;
-	position: relative;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
 }
 
-.ImgOverLaycontainer:hover .overlay {
-  opacity: 0.9;
-  border-style: solid;
-  border-color: red;
+.ImgOverLaycontainer {
+    width: 100%;
+    position: relative;
 }
+
+    .ImgOverLaycontainer:hover .overlay {
+        opacity: 0.9;
+        border-style: solid;
+        border-color: red;
+    }
 
 /*styling for text overlay on hover for code/live pictures */
-.imgText {font-size: 1rem;}
+.imgText {
+    font-size: 1rem;
+}
 
 @media (min-width: 576px) {
-	.imgText {font-size: 1.25rem;}
-	
+    .imgText {
+        font-size: 1.25rem;
+    }
 }
 
 @media (min-width: 768px) {
-	.imgText {font-size: 1.5rem;}
-	
+    .imgText {
+        font-size: 1.5rem;
+    }
 }
 
 
 @media (min-width: 992px) {
-	.imgText {font-size: 1.75rem;}
-	
+    .imgText {
+        font-size: 1.75rem;
+    }
 }
 
 
 @media (min-width: 1200px) {
-	.imgText {font-size: 2rem;}
-	
+    .imgText {
+        font-size: 2rem;
+    }
 }
 
 img {
-	width:100%;
-	
+    width: 100%;
 }
 
 /*styling for modal */
 .modal-dialog {
-      max-width: 90%;
-	  max-height:60%;
-
-  }
-.modal-body {
-  position:relative;
-  padding:0px;
+    max-width: 90%;
+    max-height: 60%;
 }
+
+.modal-body {
+    position: relative;
+    padding: 0px;
+}
+
 .close {
-  position:absolute;
-  right:-30px;
-  top:0;
-  z-index:999;
-  font-size:2rem;
-  font-weight: normal;
-  color:#fff;
-  opacity:1;
+    position: absolute;
+    right: -30px;
+    top: 0;
+    z-index: 999;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    opacity: 1;
 }
 
 /*styling for carasel when hovering over with mouse. Lets user know they can click for a pop up */
 
 #carouselExampleIndicators > div:hover {
-	cursor: pointer;
-	
-	
+    cursor: pointer;
 }
 
 /* styleing for my youtube iframe */
 #youtube {
-	margin-top: 10px;
-	
-	
+    margin-top: 10px;
 }
 
 
 /*css for my glyphicon discontinued for bootstrap 4 */
-@font-face{font-family:'Glyphicons Halflings';src:url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot');src:url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff') format('woff'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf') format('truetype'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');}.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;}
-.glyphicon-question-sign:before{content:"\e085";}
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot');
+    src: url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff') format('woff'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf') format('truetype'),url('https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.glyphicon-question-sign:before {
+    content: "\e085";
+}
 
 
 #QuestionMark {
-	display: inline;border: 1px
-	
+    display: inline;
+    border: 1px
 }
 
 
 .jumbotron {
-	 overflow: auto;
-	
-	
+    overflow: auto;
 }
 
 
 
-#iframeContainer { display: none; }
+#iframeContainer {
+    display: none;
+}
 
 
 
-@media only screen and (min-width:
-575px) { 
+@media only screen and (min-width: 575px) {
 
-.Cssdropdown .dropbtn:hover { transform: scale(1.1)!important; }
-.dropdown-content a:hover { transform: scale(1.1)!important; } 
-/*overrideBootstrap css for nav buttons*/ 
+    .Cssdropdown .dropbtn:hover {
+        transform: scale(1.1) !important;
+    }
+
+    .dropdown-content a:hover {
+        transform: scale(1.1) !important;
+    }
+    /*overrideBootstrap css for nav buttons*/
 
 
- .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus
-{ transform: scale(1.1)!important; } 
-
-
+    .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+        transform: scale(1.1) !important;
+    }
 }
 
 
 
 .mfp-img {
     width: 100% !important;
-  
 }
 
 .mfp-content {
     width: 80% !important;
-    
 }
